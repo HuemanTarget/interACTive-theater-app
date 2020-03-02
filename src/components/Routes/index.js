@@ -3,9 +3,13 @@ import { Route, Switch } from 'react-router-dom'
 
 import Home from '../../pages/Home'
 import Login from '../../pages/Login'
-import Signup from '../../pages/Signup'
 import Playbill from '../../pages/Playbill'
 import QuestionsOne from '../../pages/QuestionsOne/QuestionOne'
+import QuestionsTwoA from '../../pages/QuestionsTwo/QuestionTwoA'
+import QuestionsTwoB from '../../pages/QuestionsTwo/QuestionTwoB'
+import QuestionsTwoC from '../../pages/QuestionsTwo/QuestionTwoC'
+import QuestionsTwoD from '../../pages/QuestionsTwo/QuestionTwoD'
+import QuestionsTwoE from '../../pages/QuestionsTwo/QuestionTwoE'
 
 export default ({ doSetCurrentUser }) => (
   <Switch>
@@ -17,13 +21,6 @@ export default ({ doSetCurrentUser }) => (
     />
     <Route
       exact
-      path='/signup'
-      render={props => (
-        <Signup {...props} doSetCurrentUser={doSetCurrentUser} />
-      )}
-    />
-    <Route
-      exact
       path='/playbill'
       render={() => <Playbill doSetCurrentUser={doSetCurrentUser} />}
     />
@@ -31,6 +28,31 @@ export default ({ doSetCurrentUser }) => (
       exact
       path='/questions-one'
       render={() => <QuestionsOne doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/questions-two-a'
+      render={() => <QuestionsTwoA doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/questions-two-b'
+      render={() => <QuestionsTwoB doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/questions-two-c'
+      render={() => <QuestionsTwoC doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/questions-two-d'
+      render={() => <QuestionsTwoD doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/questions-two-e'
+      render={() => <QuestionsTwoE doSetCurrentUser={doSetCurrentUser} />}
     />
   </Switch>
 )

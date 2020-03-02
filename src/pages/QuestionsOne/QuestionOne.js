@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom'
 import Progress from '../QuestionsOne/Progress'
 import Question from '../QuestionsOne/Question'
 import Answers from '../QuestionsOne/Answers'
@@ -7,6 +8,7 @@ import QuestionsTwoA from '../QuestionsTwo/QuestionTwoA'
 import QuestionsTwoB from '../QuestionsTwo/QuestionTwoB'
 import QuestionsTwoC from '../QuestionsTwo/QuestionTwoC'
 import QuestionsTwoD from '../QuestionsTwo/QuestionTwoD'
+import QuestionsTwoE from '../QuestionsTwo/QuestionTwoE'
 
 
 import './style.css';
@@ -113,29 +115,45 @@ function QuestionOne() {
     let b = ["B","B","B"];
     let c = ["C","C","C"];
     let d = ["A","B","C"];
-
+    
     if (a[0] + a[1] + a[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
       return(
         <div>
-          <QuestionsTwoA />
+          <NavLink exact to='/questions-two-a'>
+            <QuestionsTwoA />
+          </NavLink>
         </div>
       )
     }else if(b[0] + b[1] + b[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
       return(
         <div>
-          <QuestionsTwoB />
+          <NavLink exact to='/questions-two-b'>
+            <QuestionsTwoB />
+          </NavLink>
         </div>
       )
     }else if(c[0] + c[1] + c[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
       return(
         <div>
-          <QuestionsTwoC />
+          <NavLink exact to='/questions-two-c'>
+            <QuestionsTwoC />
+          </NavLink>
         </div>
       )
     }else if(d[0] + d[1] + d[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
       return(
         <div>
-          <QuestionsTwoD />
+          <NavLink exact to='/questions-two-d'>
+            <QuestionsTwoD />
+          </NavLink>
+        </div>
+      )
+    }else{
+      return(
+        <div>
+          <NavLink exact to='/questions-two-e'>
+            <QuestionsTwoE />
+          </NavLink>
         </div>
       )
     }
@@ -148,8 +166,8 @@ function QuestionOne() {
         Thank You For Voting.<br/>
         The Audiences Answers Will Help<br/>
         Determine The Rest Of The Show.<br/>
-        You Chose Letters.
         </h2>
+        <br/>
           {/* {renderResultsData()} */}
           {nextQuestion()}
       </div>
