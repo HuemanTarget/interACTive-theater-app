@@ -4,11 +4,11 @@ import Progress from '../QuestionsOne/Progress'
 import Question from '../QuestionsOne/Question'
 import Answers from '../QuestionsOne/Answers'
 
-import QuestionsTwoA from '../QuestionsTwo/QuestionTwoA'
-import QuestionsTwoB from '../QuestionsTwo/QuestionTwoB'
-import QuestionsTwoC from '../QuestionsTwo/QuestionTwoC'
-import QuestionsTwoD from '../QuestionsTwo/QuestionTwoD'
-import QuestionsTwoE from '../QuestionsTwo/QuestionTwoE'
+// import QuestionsTwoA from '../QuestionsTwo/QuestionTwoA'
+// import QuestionsTwoB from '../QuestionsTwo/QuestionTwoB'
+// import QuestionsTwoC from '../QuestionsTwo/QuestionTwoC'
+// import QuestionsTwoD from '../QuestionsTwo/QuestionTwoD'
+// import QuestionsTwoE from '../QuestionsTwo/QuestionTwoE'
 
 
 import './style.css';
@@ -120,7 +120,7 @@ function QuestionOne() {
       return(
         <div>
           <NavLink exact to='/questions-two-a'>
-            <QuestionsTwoA />
+            Questions Two
           </NavLink>
         </div>
       )
@@ -128,7 +128,7 @@ function QuestionOne() {
       return(
         <div>
           <NavLink exact to='/questions-two-b'>
-            <QuestionsTwoB />
+            Questions Two
           </NavLink>
         </div>
       )
@@ -136,7 +136,7 @@ function QuestionOne() {
       return(
         <div>
           <NavLink exact to='/questions-two-c'>
-            <QuestionsTwoC />
+            Questions Two
           </NavLink>
         </div>
       )
@@ -144,7 +144,7 @@ function QuestionOne() {
       return(
         <div>
           <NavLink exact to='/questions-two-d'>
-            <QuestionsTwoD />
+            Questions Two
           </NavLink>
         </div>
       )
@@ -152,7 +152,7 @@ function QuestionOne() {
       return(
         <div>
           <NavLink exact to='/questions-two-e'>
-            <QuestionsTwoE />
+            Questions Two
           </NavLink>
         </div>
       )
