@@ -3,7 +3,14 @@ import Progress from '../QuestionsOne/Progress'
 import Question from '../QuestionsOne/Question'
 import Answers from '../QuestionsOne/Answers'
 
+import QuestionsTwoA from '../QuestionsTwo/QuestionTwoA'
+import QuestionsTwoB from '../QuestionsTwo/QuestionTwoB'
+import QuestionsTwoC from '../QuestionsTwo/QuestionTwoC'
+import QuestionsTwoD from '../QuestionsTwo/QuestionTwoD'
+
+
 import './style.css';
+
 
 function QuestionOne() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -11,6 +18,7 @@ function QuestionOne() {
   const [answers, setAnswers] = useState([]);
   const [showResults, setShowResults] = useState(false);
   const [error, setError] = useState('');
+  // const [answersA, setAnswersA] = useState([1,2,3]);
 
   const questions = [
     {
@@ -98,6 +106,40 @@ function QuestionOne() {
     setShowResults(true);
   }
   console.log(questions)
+  console.log(answers)
+
+  const nextQuestion = () => {
+    let a = ["A","A","A"];
+    let b = ["B","B","B"];
+    let c = ["C","C","C"];
+    let d = ["A","B","C"];
+
+    if (a[0] + a[1] + a[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
+      return(
+        <div>
+          <QuestionsTwoA />
+        </div>
+      )
+    }else if(b[0] + b[1] + b[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
+      return(
+        <div>
+          <QuestionsTwoB />
+        </div>
+      )
+    }else if(c[0] + c[1] + c[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
+      return(
+        <div>
+          <QuestionsTwoC />
+        </div>
+      )
+    }else if(d[0] + d[1] + d[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
+      return(
+        <div>
+          <QuestionsTwoD />
+        </div>
+      )
+    }
+  }
 
   if (showResults) {
     return(
@@ -108,7 +150,8 @@ function QuestionOne() {
         Determine The Rest Of The Show.<br/>
         You Chose Letters.
         </h2>
-          <ul>{renderResultsData()}</ul>
+          {/* {renderResultsData()} */}
+          {nextQuestion()}
       </div>
     )
   }else{

@@ -1,16 +1,22 @@
 import React from 'react';
 
 const Playbill = () => {
-        var tempDate = new Date();
-        var date = tempDate.getFullYear() + '-' + (tempDate.getMonth()+1) + '-' + tempDate.getDate() +' '+ tempDate.getHours()+':'+ tempDate.getMinutes()+':'+ tempDate.getSeconds();
-        const currDate = "Current Date= "+date;
+
+    const currTime = () => {
+        var tempTime = new Date();
+        var time = tempTime.getHours()+':'+ tempTime.getMinutes();
+        const currTime = time;
+        return currTime
+    }
+
+    
         
     
     
     return(
         <div>
-            <h1>Playbill</h1>
-            <p>{currDate}</p>
+            Playbill
+            <p>{currTime()}</p>
         </div>
     )
 }
