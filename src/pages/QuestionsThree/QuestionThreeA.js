@@ -1,20 +1,14 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom'
-import Progress from '../QuestionsTwo/Progress'
-import Question from '../QuestionsTwo/Question'
-import Answers from '../QuestionsTwo/Answers'
-
-// import QuestionsTwoA from '../QuestionsTwo/QuestionTwoA'
-// import QuestionsTwoB from '../QuestionsTwo/QuestionTwoB'
-// import QuestionsTwoC from '../QuestionsTwo/QuestionTwoC'
-// import QuestionsTwoD from '../QuestionsTwo/QuestionTwoD'
-// import QuestionsTwoE from '../QuestionsTwo/QuestionTwoE'
+import Progress from '../QuestionsThree/Progress'
+import Question from '../QuestionsThree/Question'
+import Answers from '../QuestionsThree/Answers'
 
 
 import './style.css';
 
 
-function QuestionsTwoC() {
+function QuestionsThreeA() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [currentAnswer, setCurrentAnswer] = useState('');
   const [answers, setAnswers] = useState([]);
@@ -25,7 +19,7 @@ function QuestionsTwoC() {
   const questions = [
     {
         id: 1,
-        question: '2C - 1?',
+        question: '3A - 1?',
         answer_a: 'Sir Kennsignton',
         answer_b: 'Martha Blackwood',
         answer_c: 'Anderson Brinkley',
@@ -33,7 +27,7 @@ function QuestionsTwoC() {
     },
     {
         id: 2,
-        question: '2C - 2?',
+        question: '3A - 2?',
         answer_a: 'Knife in the back.',
         answer_b: 'Poison.',
         answer_c: 'Candlestick to the head.',
@@ -41,7 +35,7 @@ function QuestionsTwoC() {
     },
     {
         id: 3,
-        question: '2C - 3?',
+        question: '3A - 3?',
         answer_a: 'Samantha Spiney',
         answer_b: 'Bruce Santos',
         answer_c: 'Elizabeth Hershey',
@@ -67,15 +61,15 @@ function QuestionsTwoC() {
   }
 
 
-//   const renderResultsData = () => {
-//     return (
-//         <h2>
-//             {questions[0].question} - {answers[0].answer} <br/>
-//             {questions[1].question} - {answers[1].answer} <br/>
-//             {questions[2].question} - {answers[2].answer} <br/>
-//         </h2>
-//     )
-//   }
+  // const renderResultsData = () => {
+  //   return (
+  //       <h2>
+  //           {questions[0].question} - {answers[0].answer} <br/>
+  //           {questions[1].question} - {answers[1].answer} <br/>
+  //           {questions[2].question} - {answers[2].answer} <br/>
+  //       </h2>
+  //   )
+  // }
 
     // const renderResultsData = () => {
     //     return answers.map(answer => {
@@ -119,40 +113,40 @@ function QuestionsTwoC() {
     if (a[0] + a[1] + a[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
       return(
         <div>
-          <NavLink exact to='/questions-three-a'>
-            Questions Three
+          <NavLink exact to='/questions-four-a'>
+            Questions Four
           </NavLink>
         </div>
       )
     }else if(b[0] + b[1] + b[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
       return(
         <div>
-          <NavLink exact to='/questions-three-b'>
-            Questions Three
+          <NavLink exact to='/questions-four-b'>
+            Questions Four
           </NavLink>
         </div>
       )
     }else if(c[0] + c[1] + c[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
       return(
         <div>
-          <NavLink exact to='/questions-three-c'>
-            Questions Three
+          <NavLink exact to='/questions-four-c'>
+            Questions Four
           </NavLink>
         </div>
       )
     }else if(d[0] + d[1] + d[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
       return(
         <div>
-          <NavLink exact to='/questions-three-d'>
-            Questions Three
+          <NavLink exact to='/questions-four-d'>
+            Questions Four
           </NavLink>
         </div>
       )
     }else{
       return(
         <div>
-          <NavLink exact to='/questions-three-e'>
-            Questions Three
+          <NavLink exact to='/questions-four-e'>
+            Questions Four
           </NavLink>
         </div>
       )
@@ -187,4 +181,4 @@ function QuestionsTwoC() {
   }
 }
 
-export default QuestionsTwoC;
+export default QuestionsThreeA;

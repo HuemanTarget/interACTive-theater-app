@@ -10,6 +10,11 @@ import QuestionsTwoB from '../../pages/QuestionsTwo/QuestionTwoB'
 import QuestionsTwoC from '../../pages/QuestionsTwo/QuestionTwoC'
 import QuestionsTwoD from '../../pages/QuestionsTwo/QuestionTwoD'
 import QuestionsTwoE from '../../pages/QuestionsTwo/QuestionTwoE'
+import QuestionsThreeA from '../../pages/QuestionsThree/QuestionThreeA'
+import QuestionsThreeB from '../../pages/QuestionsThree/QuestionThreeB'
+import QuestionsThreeC from '../../pages/QuestionsThree/QuestionThreeC'
+import QuestionsThreeD from '../../pages/QuestionsThree/QuestionThreeD'
+import QuestionsThreeE from '../../pages/QuestionsThree/QuestionThreeE'
 
 export default ({ doSetCurrentUser }) => (
   <Switch>
@@ -53,6 +58,56 @@ export default ({ doSetCurrentUser }) => (
       exact
       path='/questions-two-e'
       render={() => <QuestionsTwoE doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/questions-three-a'
+      render={() => <QuestionsThreeA doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/questions-three-b'
+      render={() => <QuestionsThreeB doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/questions-three-c'
+      render={() => <QuestionsThreeC doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/questions-three-d'
+      render={() => <QuestionsThreeD doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/questions-three-e'
+      render={() => <QuestionsThreeE doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/questions-four-a'
+      render={() => <QuestionsThreeA doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/questions-four-b'
+      render={() => <QuestionsThreeB doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/questions-four-c'
+      render={() => <QuestionsThreeC doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/questions-four-d'
+      render={() => <QuestionsThreeD doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/questions-four-e'
+      render={() => <QuestionsThreeE doSetCurrentUser={doSetCurrentUser} />}
     />
   </Switch>
 )

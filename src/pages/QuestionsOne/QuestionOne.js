@@ -67,15 +67,15 @@ function QuestionOne() {
   }
 
 
-  const renderResultsData = () => {
-    return (
-        <h2>
-            {questions[0].question} - {answers[0].answer} <br/>
-            {questions[1].question} - {answers[1].answer} <br/>
-            {questions[2].question} - {answers[2].answer} <br/>
-        </h2>
-    )
-  }
+  // const renderResultsData = () => {
+  //   return (
+  //       <h2>
+  //           {questions[0].question} - {answers[0].answer} <br/>
+  //           {questions[1].question} - {answers[1].answer} <br/>
+  //           {questions[2].question} - {answers[2].answer} <br/>
+  //       </h2>
+  //   )
+  // }
 
     // const renderResultsData = () => {
     //     return answers.map(answer => {

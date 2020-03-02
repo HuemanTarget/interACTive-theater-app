@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Progress from '../QuestionsTwo/Progress'
 import Question from '../QuestionsTwo/Question'
 import Answers from '../QuestionsTwo/Answers'
@@ -67,15 +67,15 @@ function QuestionsTwoB() {
   }
 
 
-  const renderResultsData = () => {
-    return (
-        <h2>
-            {questions[0].question} - {answers[0].answer} <br/>
-            {questions[1].question} - {answers[1].answer} <br/>
-            {questions[2].question} - {answers[2].answer} <br/>
-        </h2>
-    )
-  }
+//   const renderResultsData = () => {
+//     return (
+//         <h2>
+//             {questions[0].question} - {answers[0].answer} <br/>
+//             {questions[1].question} - {answers[1].answer} <br/>
+//             {questions[2].question} - {answers[2].answer} <br/>
+//         </h2>
+//     )
+//   }
 
     // const renderResultsData = () => {
     //     return answers.map(answer => {
@@ -110,54 +110,54 @@ function QuestionsTwoB() {
   console.log(questions)
   console.log(answers)
 
-//   const nextQuestion = () => {
-//     let a = ["A","A","A"];
-//     let b = ["B","B","B"];
-//     let c = ["C","C","C"];
-//     let d = ["A","B","C"];
+  const nextQuestion = () => {
+    let a = ["A","A","A"];
+    let b = ["B","B","B"];
+    let c = ["C","C","C"];
+    let d = ["A","B","C"];
     
-//     if (a[0] + a[1] + a[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
-//       return(
-//         <div>
-//           <NavLink exact to='/questions-two-a'>
-//             <QuestionsTwoA />
-//           </NavLink>
-//         </div>
-//       )
-//     }else if(b[0] + b[1] + b[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
-//       return(
-//         <div>
-//           <NavLink exact to='/questions-two-b'>
-//             <QuestionsTwoB />
-//           </NavLink>
-//         </div>
-//       )
-//     }else if(c[0] + c[1] + c[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
-//       return(
-//         <div>
-//           <NavLink exact to='/questions-two-c'>
-//             <QuestionsTwoC />
-//           </NavLink>
-//         </div>
-//       )
-//     }else if(d[0] + d[1] + d[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
-//       return(
-//         <div>
-//           <NavLink exact to='/questions-two-d'>
-//             <QuestionsTwoD />
-//           </NavLink>
-//         </div>
-//       )
-//     }else{
-//       return(
-//         <div>
-//           <NavLink exact to='/questions-two-e'>
-//             <QuestionsTwoE />
-//           </NavLink>
-//         </div>
-//       )
-//     }
-//   }
+    if (a[0] + a[1] + a[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
+      return(
+        <div>
+          <NavLink exact to='/questions-three-a'>
+            Questions Three
+          </NavLink>
+        </div>
+      )
+    }else if(b[0] + b[1] + b[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
+      return(
+        <div>
+          <NavLink exact to='/questions-three-b'>
+            Questions Three
+          </NavLink>
+        </div>
+      )
+    }else if(c[0] + c[1] + c[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
+      return(
+        <div>
+          <NavLink exact to='/questions-three-c'>
+            Questions Three
+          </NavLink>
+        </div>
+      )
+    }else if(d[0] + d[1] + d[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
+      return(
+        <div>
+          <NavLink exact to='/questions-three-d'>
+            Questions Three
+          </NavLink>
+        </div>
+      )
+    }else{
+      return(
+        <div>
+          <NavLink exact to='/questions-three-e'>
+            Questions Three
+          </NavLink>
+        </div>
+      )
+    }
+  }
 
   if (showResults) {
     return(
@@ -168,8 +168,8 @@ function QuestionsTwoB() {
         Determine The Rest Of The Show.<br/>
         </h2>
         <br/>
-          {renderResultsData()}
-          {/* {nextQuestion()} */}
+          {/* {renderResultsData()} */}
+          {nextQuestion()}
       </div>
     )
   }else{
