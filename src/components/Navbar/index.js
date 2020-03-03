@@ -4,29 +4,31 @@ import './NavBar.css'
 import Firebase from '../Firebase/firebase'
 import { useSession } from '../../App'
 
-const Navbar = ({ isLoggedIn, currentUser, doSetCurrentUser }) => {
+const Navbar = () => {
   const user = useSession()
 
   const logoutUser = async () => {
     try {
       await Firebase.doSignOut()
-      doSetCurrentUser({})
     } catch (error) {
       console.log(error)
     }
   }
+
   return (
     <nav>
-      {isLoggedIn ? (
+      <NavLink exact to='/' style={{ margin: '0px 10px 0px 10px' }}>
+        Home
+      </NavLink>
+      {user ? (
         <>
           <NavLink exact to='/playbill' style={{ margin: '0px 10px 0px 10px' }}>
             Playbill
           </NavLink>
-          <span>
           <NavLink exact to='/questions-one' style={{ margin: '0px 10px 0px 10px' }}>
             Questions
           </NavLink>
-          <span></span>
+          <span>
             <NavLink
               to='/login'
               children='Logout'
@@ -38,9 +40,6 @@ const Navbar = ({ isLoggedIn, currentUser, doSetCurrentUser }) => {
         </>
       ) : (
         <>
-          <NavLink exact to='/' style={{ margin: '0px 10px 0px 10px' }}>
-            Home
-          </NavLink>
           <NavLink
             to='/login'
             children='Login'

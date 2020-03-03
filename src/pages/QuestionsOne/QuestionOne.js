@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom'
+import { useSession } from '../../App'
+import Firebase from '../../components/Firebase/firebase'
+import firebase from 'firebase'
 import Progress from '../QuestionsOne/Progress'
 import Question from '../QuestionsOne/Question'
 import Answers from '../QuestionsOne/Answers'
@@ -14,10 +17,12 @@ import Answers from '../QuestionsOne/Answers'
 import './style.css';
 
 
-function QuestionOne() {
+function QuestionOne(props) {
+  const user = useSession()
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [currentAnswer, setCurrentAnswer] = useState('');
   const [answers, setAnswers] = useState([]);
+  const [answerInput, setAnswerInput] = useState('')
   const [showResults, setShowResults] = useState(false);
   const [error, setError] = useState('');
   // const [answersA, setAnswersA] = useState([1,2,3]);
@@ -65,6 +70,34 @@ function QuestionOne() {
     return <div className='error'>{error}</div>
 
   }
+
+  const handleSubmit = async event => {
+    event.preventDefault()
+    const batch = Firebase.db.batch()
+    const userRef = Firebase.db.collection('users').doc(user.uid)
+    try {
+      // Create a new post doc with auto ID locally
+      const newAnswerRef = Firebase.db.collection('answers').doc()
+      // add batch op to set post data including logged in uid
+      batch.set(newAnswerRef, {
+        title: answerInput,
+        lastModified: firebase.firestore.FieldValue.serverTimestamp(),
+        uid: user.uid,
+      })
+      // add batch op to update user posts array
+      batch.update(userRef, {
+        posts: firebase.firestore.FieldValue.arrayUnion(newAnswerRef.id),
+      })
+      // commit batch ops
+      batch.commit().then(() => {
+        console.log('Added new post', newAnswerRef.id)
+      })
+    } catch (error) {
+      console.error('Error adding document: ', error)
+    }
+    setAnswerInput('')
+  }
+  
 
 
   // const renderResultsData = () => {
@@ -116,7 +149,7 @@ function QuestionOne() {
     let c = ["C","C","C"];
     let d = ["A","B","C"];
     
-    if (a[0] + a[1] + a[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
+    if (a[0] === answers[0].answer) {
       return(
         <div>
           <NavLink exact to='/questions-two-a'>
@@ -124,7 +157,7 @@ function QuestionOne() {
           </NavLink>
         </div>
       )
-    }else if(b[0] + b[1] + b[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
+    }else if(b[0] === answers[0].answer) {
       return(
         <div>
           <NavLink exact to='/questions-two-b'>
@@ -132,7 +165,7 @@ function QuestionOne() {
           </NavLink>
         </div>
       )
-    }else if(c[0] + c[1] + c[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
+    }else if(c[0] === answers[0].answer) {
       return(
         <div>
           <NavLink exact to='/questions-two-c'>
@@ -140,7 +173,7 @@ function QuestionOne() {
           </NavLink>
         </div>
       )
-    }else if(d[0] + d[1] + d[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
+    }else if(d[0] === answers[0].answer) {
       return(
         <div>
           <NavLink exact to='/questions-two-d'>
@@ -175,6 +208,10 @@ function QuestionOne() {
   }else{
   return (
     <div className='container'>
+    <form
+        onSubmit={handleSubmit}
+        style={{ marginTop: '.5em', marginBottom: '.5em' }}
+    >
       <Progress total={questions.length} current={currentQuestion + 1} />
       <Question question={question.question} />
       {renderError()}
@@ -182,6 +219,7 @@ function QuestionOne() {
       <button className='btn btn-primary' onClick={next}>
         Confirm And Continue
       </button>
+    </form>
     </div>
   );
   }

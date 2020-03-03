@@ -1,72 +1,75 @@
-import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Redirect, useLocation, useHistory } from 'react-router-dom'
 import Firebase from '../../components/Firebase/firebase'
 
-class Login extends Component {
-  state = {
+import { useSession } from '../../App'
+
+const Login = () => {
+  const user = useSession()
+  const location = useLocation()
+  const history = useHistory()
+  const { from } = location.state || { from: { pathname: '/' } }
+  const [state, setState] = useState({
     email: '',
     password: '',
-    isAuth: false,
-  }
+  })
+  const [error, setError] = useState(null)
 
-  handleChange = e => {
-    this.setState({
-      [e.target.name]: e.target.value,
+  const handleChange = evt => {
+    const value = evt.target.value
+    setState({
+      ...state,
+      [evt.target.name]: value,
     })
   }
 
-  handleFormSubmit = async e => {
-    const { email, password } = this.state
+  const handleFormSubmit = async e => {
+    const { email, password } = state
     e.preventDefault()
     try {
       await Firebase.doSignInWithEmailAndPassword(email, password)
-      this.props.doSetCurrentUser({
-        email,
-      })
-      this.setState({
-        isAuth: true,
-      })
+      history.replace(from)
     } catch (error) {
-      console.log(error)
+      setError(error)
+      setTimeout(() => {
+        setError(null)
+      }, 3000)
     }
   }
-
-  render() {
-    const { email, password, isAuth } = this.state
-    if (isAuth) {
-      return <Redirect to='/playbill' />
-    }
-    return (
-      <div>
-        <h1>Login</h1>
-        <form onSubmit={this.handleFormSubmit}>
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <input
-              name='email'
-              onChange={this.handleChange}
-              value={email}
-              placeholder='email'
-            />
-            <input
-              name='password'
-              onChange={this.handleChange}
-              value={password}
-              placeholder='password'
-              type='password'
-            />
-            <button type='submit'>Login</button>
-          </div>
-        </form>
-      </div>
-    )
+  if (user) {
+    return <Redirect to='/playbill' />
   }
+  return (
+    <div>
+      <h1>Login</h1>
+      <form onSubmit={handleFormSubmit}>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <input
+            name='email'
+            onChange={handleChange}
+            value={state.email}
+            placeholder='email'
+          />
+          <input
+            name='password'
+            onChange={handleChange}
+            value={state.password}
+            placeholder='password'
+            type='password'
+          />
+          <button type='submit'>Login</button>
+        </div>
+      </form>
+      {error && <div style={{ color: 'red' }}>{error.message}</div>}
+    </div>
+  )
 }
 
 export default Login
