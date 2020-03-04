@@ -47,6 +47,16 @@ export default ({ doSetCurrentUser }) => (
     />
     <Route
       exact
+      path='/playbill-two-b'
+      render={() => <PlaybillTwoB doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/playbill-two-c'
+      render={() => <PlaybillTwoC doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
       path='/questions-two-a'
       render={() => <QuestionsTwoA doSetCurrentUser={doSetCurrentUser} />}
     />

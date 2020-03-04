@@ -16,7 +16,11 @@ const PlaybillTwoA = () => {
     const pages = [
         { 
             page: 1,
-            content: "The lights came back on and Professor Donk was found slumped over in his chair dead. Not knowing who invited them on this trip the cohort decided to split up to find help. Bitana, DJ, and The Sophias moved towards the front of the train while Ernie, Blake, and Zane moved to the back. Unaware that more danger still lurked at every corner."
+            content: "The lights came back on and The Sophias are found slumped over in his chair dead. Not knowing who invited them on this trip the cohort decided to split up to find help. DJ, Professor Donk, and Ernie moved towards the front of the train while Mustang Zane, Blake, and Bitana moved to the back. Unaware that more danger still lurked at every corner."
+        },
+        { 
+            page: 2,
+            content: "Professor Donk, DJ, and Ernie walked gingerly looking for help with no one else in sight. They finally made it up to the locomotive car to find no one is driving the train. They walk back to find the other cohort members when a panel in the floor opens up."
         },
     ];
 
@@ -26,7 +30,7 @@ const PlaybillTwoA = () => {
     
     return(
         <div>
-            <NavLink exact to='/questions-two-a'>
+            <NavLink exact to='/questions-two-c'>
                 Questions Two
             </NavLink>
             <div className="app">

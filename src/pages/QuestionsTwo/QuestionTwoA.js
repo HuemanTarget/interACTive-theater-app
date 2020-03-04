@@ -25,27 +25,24 @@ function QuestionsTwoA() {
   const questions = [
     {
         id: 1,
-        question: '2A - 1?',
-        answer_a: 'Sir Kennsignton',
-        answer_b: 'Martha Blackwood',
-        answer_c: 'Anderson Brinkley',
-        answer_d: 'Brandon Aldridge',
+        question: 'Who fell through the floor?',
+        answer_a: 'Bitana The Great',
+        answer_b: 'DJ Galindo',
+        answer_c: 'The Sophias',
     },
     {
         id: 2,
-        question: '2A - 2?',
-        answer_a: 'Knife in the back.',
-        answer_b: 'Poison.',
-        answer_c: 'Candlestick to the head.',
-        answer_d: 'Stranglation',
+        question: 'What did they yell as they fell?',
+        answer_a: 'Oh Shit!',
+        answer_b: "I'm too young to die!",
+        answer_c: 'Tell my Long Furby I love him.',
     },
     {
         id: 3,
-        question: '2A - 3?',
-        answer_a: 'Samantha Spiney',
-        answer_b: 'Bruce Santos',
-        answer_c: 'Elizabeth Hershey',
-        answer_d: 'Demarcus Michaels',
+        question: 'What animal do you wish you could be?',
+        answer_a: 'Cat',
+        answer_b: 'Dog',
+        answer_c: 'Lobster',
     },
   ];
     
@@ -114,45 +111,36 @@ function QuestionsTwoA() {
     let a = ["A","A","A"];
     let b = ["B","B","B"];
     let c = ["C","C","C"];
-    let d = ["A","B","C"];
     
     if (a[0] + a[1] + a[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
       return(
         <div>
-          <NavLink exact to='/questions-three-a'>
-            Questions Three
+          <NavLink exact to='/playbill-three-a'>
+            Continue The Story
           </NavLink>
         </div>
       )
     }else if(b[0] + b[1] + b[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
       return(
         <div>
-          <NavLink exact to='/questions-three-b'>
-            Questions Three
+          <NavLink exact to='/playbill-three-b'>
+            Continue The Story
           </NavLink>
         </div>
       )
     }else if(c[0] + c[1] + c[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
       return(
         <div>
-          <NavLink exact to='/questions-three-c'>
-            Questions Three
-          </NavLink>
-        </div>
-      )
-    }else if(d[0] + d[1] + d[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
-      return(
-        <div>
-          <NavLink exact to='/questions-three-d'>
-            Questions Three
+          <NavLink exact to='/playbill-three-c'>
+            Continue The Story
           </NavLink>
         </div>
       )
     }else{
       return(
         <div>
-          <NavLink exact to='/questions-three-e'>
-            Questions Three
+          <NavLink exact to='/playbill-three-c'>
+            Continue The Story
           </NavLink>
         </div>
       )
