@@ -95,7 +95,7 @@ function QuestionsThreeA() {
     if (a[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/playbill-four-aaa'>
+          <NavLink exact to='/playbill-four-aba'>
             Question Four
           </NavLink>
         </div>
@@ -103,7 +103,7 @@ function QuestionsThreeA() {
     }else if(b[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/playbill-four-aba'>
+          <NavLink exact to='/playbill-four-abb'>
             Question Four
           </NavLink>
         </div>
@@ -111,7 +111,7 @@ function QuestionsThreeA() {
     }else if(c[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/playbill-four-abb'>
+          <NavLink exact to='/playbill-four-abc'>
             Question Four
           </NavLink>
         </div>
