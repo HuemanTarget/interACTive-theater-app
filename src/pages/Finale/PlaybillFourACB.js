@@ -14,7 +14,7 @@ const PlaybillFourAAA = () => {
         },
         { 
             page: 2,
-            content: "Professor Donk was disrupting my youth b-ball camps and had to go for their safety while DJ Galindo was selling my team counterfeit Long Furbies and no on disrespects the Blakers like that. I would've gotten away with it all if it wasn't for you meddling students and your damn teachers."
+            content: "Professor Donk was disrupting my youth b-ball camps and had to go for their safety while The Sophias were sleeping with our star center making her miss practices and games. I would've gotten away with it all if it wasn't for you meddling students and your damn teachers."
         },
     ];
 
@@ -42,7 +42,7 @@ const PlaybillFourAAA = () => {
             ))}
             </FlipPage>
             </div>
-            <NavLink exact to='/results-abb'>
+            <NavLink exact to='/results-acb'>
                 Results
             </NavLink>
         </div>

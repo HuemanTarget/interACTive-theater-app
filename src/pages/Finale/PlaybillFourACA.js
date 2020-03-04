@@ -14,7 +14,7 @@ const PlaybillFourAAA = () => {
         },
         { 
             page: 2,
-            content: "Professor Donk was trying to persuade my child laborers to leave my Sriracha Factory so he had to go and DJ Galindo released a diss track on his latest album making fun of my sauce and NO ONE does that.. I would've gotten away with it all if it wasn't for you meddling students and your damn teachers."
+            content: "Professor Donk was trying to persuade my child laborers to leave my Sriracha Factory so he had to go and The Sophias were starting their own sauce Twinonnaise and I wanted to take out the competition before they got too big. I would've gotten away with it all if it wasn't for you meddling students and your damn teachers."
         },
     ];
 
@@ -42,7 +42,7 @@ const PlaybillFourAAA = () => {
             ))}
             </FlipPage>
             </div>
-            <NavLink exact to='/results-aba'>
+            <NavLink exact to='/results-aca'>
                 Results
             </NavLink>
         </div>

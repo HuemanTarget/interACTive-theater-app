@@ -14,7 +14,7 @@ const PlaybillFourAAA = () => {
         },
         { 
             page: 2,
-            content: "Professor Donk was starting an anti-porn campaign and was tainting my audience so he had to go and The Sophias were supose to be in my next porno but backed out last second for 'legitimate' art. The room was really cold dammit! I would've gotten away with it all if it wasn't for you meddling students and your damn teachers."
+            content: "Professor Donk was starting an anti-porn campaign and was tainting my audience so he had to go and DJ Galindo was sleeping with my one of my harem and I can't have that happening. The room was really cold dammit! I would've gotten away with it all if it wasn't for you meddling students and your damn teachers."
         },
     ];
 

@@ -32,6 +32,12 @@ import PlaybillFourABC from '../../pages/Finale/PlaybillFourABC'
 import ResultsABA from '../../pages/Results/ResultsABA'
 import ResultsABB from '../../pages/Results/ResultsABB'
 import ResultsABC from '../../pages/Results/ResultsABC'
+import PlaybillFourACA from '../../pages/Finale/PlaybillFourACA'
+import PlaybillFourACB from '../../pages/Finale/PlaybillFourACB'
+import PlaybillFourACC from '../../pages/Finale/PlaybillFourACC'
+import ResultsACA from '../../pages/Results/ResultsACA'
+import ResultsACB from '../../pages/Results/ResultsACB'
+import ResultsACC from '../../pages/Results/ResultsACC'
 
 
 export default ({ doSetCurrentUser }) => (
@@ -155,6 +161,24 @@ export default ({ doSetCurrentUser }) => (
     </PrivateRoute>
     <PrivateRoute exact path='/results-abc'>
       <ResultsABC doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/playbill-four-aca'>
+      <PlaybillFourACA doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/playbill-four-acb'>
+      <PlaybillFourACB doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/playbill-four-acc'>
+      <PlaybillFourACC doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-aca'>
+      <ResultsACA doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-acb'>
+      <ResultsACB doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-acc'>
+      <ResultsACC doSetCurrentUser={doSetCurrentUser} />
     </PrivateRoute>
   </Switch>
 )
