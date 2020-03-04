@@ -19,27 +19,10 @@ function QuestionsThreeA() {
   const questions = [
     {
         id: 1,
-        question: '3A - 1?',
-        answer_a: 'Sir Kennsignton',
-        answer_b: 'Martha Blackwood',
-        answer_c: 'Anderson Brinkley',
-        answer_d: 'Brandon Aldridge',
-    },
-    {
-        id: 2,
-        question: '3A - 2?',
-        answer_a: 'Knife in the back.',
-        answer_b: 'Poison.',
-        answer_c: 'Candlestick to the head.',
-        answer_d: 'Stranglation',
-    },
-    {
-        id: 3,
-        question: '3A - 3?',
-        answer_a: 'Samantha Spiney',
-        answer_b: 'Bruce Santos',
-        answer_c: 'Elizabeth Hershey',
-        answer_d: 'Demarcus Michaels',
+        question: 'Who is the murderer?',
+        answer_a: 'Ernie Middleware',
+        answer_b: 'Blake Johnson',
+        answer_c: 'Mustang Zane',
     },
   ];
     
@@ -108,36 +91,27 @@ function QuestionsThreeA() {
     let a = ["A","A","A"];
     let b = ["B","B","B"];
     let c = ["C","C","C"];
-    let d = ["A","B","C"];
     
-    if (a[0] + a[1] + a[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
+    if (a[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/questions-four-a'>
+          <NavLink exact to='/playbill-four-a'>
             Questions Four
           </NavLink>
         </div>
       )
-    }else if(b[0] + b[1] + b[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
+    }else if(b[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/questions-four-b'>
+          <NavLink exact to='/playbill-four-b'>
             Questions Four
           </NavLink>
         </div>
       )
-    }else if(c[0] + c[1] + c[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
+    }else if(c[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/questions-four-c'>
-            Questions Four
-          </NavLink>
-        </div>
-      )
-    }else if(d[0] + d[1] + d[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
-      return(
-        <div>
-          <NavLink exact to='/questions-four-d'>
+          <NavLink exact to='/playbill-four-c'>
             Questions Four
           </NavLink>
         </div>
@@ -145,7 +119,7 @@ function QuestionsThreeA() {
     }else{
       return(
         <div>
-          <NavLink exact to='/questions-four-e'>
+          <NavLink exact to='/playbill-four-c'>
             Questions Four
           </NavLink>
         </div>

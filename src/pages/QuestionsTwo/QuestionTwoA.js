@@ -112,26 +112,26 @@ function QuestionsTwoA() {
     let b = ["B","B","B"];
     let c = ["C","C","C"];
     
-    if (a[0] + a[1] + a[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
+    if (a[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/playbill-three-a'>
+          <NavLink exact to='/playbill-three-aa'>
             Continue The Story
           </NavLink>
         </div>
       )
-    }else if(b[0] + b[1] + b[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
+    }else if(b[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/playbill-three-b'>
+          <NavLink exact to='/playbill-three-ab'>
             Continue The Story
           </NavLink>
         </div>
       )
-    }else if(c[0] + c[1] + c[2] === answers[0].answer + answers[1].answer + answers[2].answer) {
+    }else if(c[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/playbill-three-c'>
+          <NavLink exact to='/playbill-three-ac'>
             Continue The Story
           </NavLink>
         </div>
@@ -139,7 +139,7 @@ function QuestionsTwoA() {
     }else{
       return(
         <div>
-          <NavLink exact to='/playbill-three-c'>
+          <NavLink exact to='/playbill-three-ac'>
             Continue The Story
           </NavLink>
         </div>

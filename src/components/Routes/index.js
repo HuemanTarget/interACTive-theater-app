@@ -5,22 +5,19 @@ import Home from '../../pages/Home'
 import Login from '../../pages/Login'
 import Playbill from '../../pages/Playbill'
 import QuestionsOne from '../../pages/QuestionsOne/QuestionOne'
-import QuestionsTwoA from '../../pages/QuestionsTwo/QuestionTwoA'
 import PlaybillTwoA from '../../pages/QuestionsTwo/PlaybillTwoA'
 import PlaybillTwoB from '../../pages/QuestionsTwo/PlaybillTwoB'
 import PlaybillTwoC from '../../pages/QuestionsTwo/PlaybillTwoC'
+import QuestionsTwoA from '../../pages/QuestionsTwo/QuestionTwoA'
 import QuestionsTwoB from '../../pages/QuestionsTwo/QuestionTwoB'
 import QuestionsTwoC from '../../pages/QuestionsTwo/QuestionTwoC'
+import PlaybillThreeAA from '../../pages/QuestionsThree/PlaybillThreeAA'
+import PlaybillThreeAB from '../../pages/QuestionsThree/PlaybillThreeAB'
+import PlaybillThreeAC from '../../pages/QuestionsThree/PlaybillThreeAC'
 import QuestionsThreeA from '../../pages/QuestionsThree/QuestionThreeA'
 import QuestionsThreeB from '../../pages/QuestionsThree/QuestionThreeB'
 import QuestionsThreeC from '../../pages/QuestionsThree/QuestionThreeC'
-import QuestionsThreeD from '../../pages/QuestionsThree/QuestionThreeD'
-import QuestionsThreeE from '../../pages/QuestionsThree/QuestionThreeE'
-import QuestionsFourA from '../../pages/QuestionsFour/QuestionFourA'
-import QuestionsFourB from '../../pages/QuestionsFour/QuestionFourB'
-import QuestionsFourC from '../../pages/QuestionsFour/QuestionFourC'
-import QuestionsFourD from '../../pages/QuestionsFour/QuestionFourD'
-import QuestionsFourE from '../../pages/QuestionsFour/QuestionFourE'
+
 
 export default ({ doSetCurrentUser }) => (
   <Switch>
@@ -72,6 +69,21 @@ export default ({ doSetCurrentUser }) => (
     />
     <Route
       exact
+      path='/playbill-three-aa'
+      render={() => <PlaybillThreeAA doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/playbill-three-ab'
+      render={() => <PlaybillThreeAB doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/playbill-three-ac'
+      render={() => <PlaybillThreeAC doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
       path='/questions-three-a'
       render={() => <QuestionsThreeA doSetCurrentUser={doSetCurrentUser} />}
     />
@@ -84,41 +96,6 @@ export default ({ doSetCurrentUser }) => (
       exact
       path='/questions-three-c'
       render={() => <QuestionsThreeC doSetCurrentUser={doSetCurrentUser} />}
-    />
-    <Route
-      exact
-      path='/questions-three-d'
-      render={() => <QuestionsThreeD doSetCurrentUser={doSetCurrentUser} />}
-    />
-    <Route
-      exact
-      path='/questions-three-e'
-      render={() => <QuestionsThreeE doSetCurrentUser={doSetCurrentUser} />}
-    />
-    <Route
-      exact
-      path='/questions-four-a'
-      render={() => <QuestionsFourA doSetCurrentUser={doSetCurrentUser} />}
-    />
-    <Route
-      exact
-      path='/questions-four-b'
-      render={() => <QuestionsFourB doSetCurrentUser={doSetCurrentUser} />}
-    />
-    <Route
-      exact
-      path='/questions-four-c'
-      render={() => <QuestionsFourC doSetCurrentUser={doSetCurrentUser} />}
-    />
-    <Route
-      exact
-      path='/questions-four-d'
-      render={() => <QuestionsFourD doSetCurrentUser={doSetCurrentUser} />}
-    />
-    <Route
-      exact
-      path='/questions-four-e'
-      render={() => <QuestionsFourE doSetCurrentUser={doSetCurrentUser} />}
     />
   </Switch>
 )
