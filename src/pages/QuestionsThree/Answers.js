@@ -22,12 +22,6 @@ const Answers = (props) => {
                 selected={props.currentAnswer === 'c'} 
                 handleClick={props.handleClick}
             />
-            <Answer 
-                letter='D' 
-                answer={props.question.answer_d} 
-                selected={props.currentAnswer === 'd'} 
-                handleClick={props.handleClick}
-            />
         </>
     )
 }

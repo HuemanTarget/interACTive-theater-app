@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Redirect, useLocation, useHistory } from 'react-router-dom'
+import { PasswordForgetLink } from '../../pages/PasswordForgetForm'
 import Firebase from '../../components/Firebase/firebase'
 
 import { useSession } from '../../App'
@@ -68,6 +69,7 @@ const Login = () => {
         </div>
       </form>
       {error && <div style={{ color: 'red' }}>{error.message}</div>}
+      <PasswordForgetLink />
     </div>
   )
 }

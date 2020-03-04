@@ -4,23 +4,17 @@ import { NavLink } from 'react-router-dom'
 
 import './style.css';
 
-const PlaybillThreeAB = () => {
+const PlaybillFourAAA = () => {
 
-    // const currTime = () => {
-    //     var tempTime = new Date();
-    //     var time = tempTime.getHours()+':'+ tempTime.getMinutes();
-    //     const currTime = time;
-    //     return currTime
-    // }
 
     const pages = [
         { 
             page: 1,
-            content: "DJ Galindo fell through the trap door screaming. DJ and The Sophias not being able to help run back to join the other members of the cohort. They reach Ernie, Blake, and Mustang Zane what happened to DJ when they hear a noise from the closet next to them."
+            content: "Blake Johnson is the murderer. But why did you do it Blake?"
         },
         { 
             page: 2,
-            content: "They open up the closet and find Papa Greg tied up. The Sophias removes the gag and Papa Greg proceeds to tell the group that he knows who the murderer is. The murderer is..."
+            content: "Professor Donk was disrupting my youth b-ball camps and had to go for their safety while Bitana The Great was into the dark arts and I'm just not into that crap. I would've gotten away with it all if it wasn't for you meddling students and your damn teachers."
         },
     ];
 
@@ -30,9 +24,6 @@ const PlaybillThreeAB = () => {
     
     return(
         <div>
-            <NavLink exact to='/questions-three-ab'>
-                Last Question
-            </NavLink>
             <div className="app">
             <FlipPage
                 className="book"
@@ -51,7 +42,10 @@ const PlaybillThreeAB = () => {
             ))}
             </FlipPage>
             </div>
+            <NavLink exact to='/results-aab'>
+                Results
+            </NavLink>
         </div>
     )
 }
-export default PlaybillThreeAB;
+export default PlaybillFourAAA;

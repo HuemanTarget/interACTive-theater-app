@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom'
-import Progress from '../QuestionsThree/Progress'
-import Question from '../QuestionsThree/Question'
-import Answers from '../QuestionsThree/Answers'
+import Progress from './Progress'
+import Question from './Question'
+import Answers from './Answers'
 
 
 import './style.css';
@@ -95,32 +95,32 @@ function QuestionsThreeA() {
     if (a[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/playbill-four-a'>
-            Questions Four
+          <NavLink exact to='/playbill-four-aca'>
+            Question Four
           </NavLink>
         </div>
       )
     }else if(b[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/playbill-four-b'>
-            Questions Four
+          <NavLink exact to='/playbill-four-acb'>
+            Question Four
           </NavLink>
         </div>
       )
     }else if(c[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/playbill-four-c'>
-            Questions Four
+          <NavLink exact to='/playbill-four-acc'>
+            Question Four
           </NavLink>
         </div>
       )
     }else{
       return(
         <div>
-          <NavLink exact to='/playbill-four-c'>
-            Questions Four
+          <NavLink exact to='/playbill-four-aac'>
+            Question Four
           </NavLink>
         </div>
       )

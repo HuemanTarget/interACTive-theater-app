@@ -45,6 +45,11 @@ const Navbar = () => {
             children='Login'
             style={{ margin: '0px 10px 0px 10px' }}
           />
+          <NavLink
+            to='/signup'
+            children='Signup'
+            style={{ margin: '0px 10px 0px 10px' }}
+          />
         </>
       )}
     </nav>

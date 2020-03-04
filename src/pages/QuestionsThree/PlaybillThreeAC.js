@@ -4,34 +4,26 @@ import { NavLink } from 'react-router-dom'
 
 import './style.css';
 
-const PlaybillTwoA = () => {
+const PlaybillThreeAC = () => {
 
-    // const currTime = () => {
-    //     var tempTime = new Date();
-    //     var time = tempTime.getHours()+':'+ tempTime.getMinutes();
-    //     const currTime = time;
-    //     return currTime
-    // }
 
     const pages = [
         { 
             page: 1,
-            content: "The lights came back on and The Sophias are found slumped over in his chair dead. Not knowing who invited them on this trip the cohort decided to split up to find help. DJ, Professor Donk, and Ernie moved towards the front of the train while Mustang Zane, Blake, and Bitana moved to the back. Unaware that more danger still lurked at every corner."
+            content: "The Sophias fell through the trap door screaming. DJ and Bitana not being able to help run back to join the other members of the cohort. They reach Ernie, Blake, and Zane what happened to Bitana when they hear a noise from the closet next to them."
         },
         { 
             page: 2,
-            content: "Professor Donk, DJ, and Ernie walked gingerly looking for help with no one else in sight. They finally made it up to the locomotive car to find no one is driving the train. They walk back to find the other cohort members when a panel in the floor opens up."
+            content: "They open up the closet and find Papa Greg tied up. Bitana removes the gag and Papa Greg proceeds to tell the group that he knows who the murderer is. The murderer is..."
         },
     ];
 
     
         
-    
-    
     return(
         <div>
-            <NavLink exact to='/questions-two-c'>
-                Questions Two
+            <NavLink exact to='/questions-three-ac'>
+                Last Question
             </NavLink>
             <div className="app">
             <FlipPage
@@ -54,4 +46,4 @@ const PlaybillTwoA = () => {
         </div>
     )
 }
-export default PlaybillTwoA;
+export default PlaybillThreeAC;

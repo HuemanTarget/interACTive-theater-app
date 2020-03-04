@@ -20,7 +20,7 @@ const PlaybillThreeAA = () => {
         },
         { 
             page: 2,
-            content: "They open up the closet and Papa Greg tied up. DJ removes the gag and proceeds to tell the group that he knows who the murderer is. The murderer is..."
+            content: "They open up the closet and find Papa Greg tied up. DJ removes the gag and Papa Greg proceeds to tell the group that he knows who the murderer is. The murderer is..."
         },
     ];
 
@@ -30,7 +30,7 @@ const PlaybillThreeAA = () => {
     
     return(
         <div>
-            <NavLink exact to='/questions-three-a'>
+            <NavLink exact to='/questions-three-aa'>
                 Last Question
             </NavLink>
             <div className="app">

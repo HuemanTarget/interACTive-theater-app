@@ -3,6 +3,9 @@ import { Route, Switch } from 'react-router-dom'
 
 import Home from '../../pages/Home'
 import Login from '../../pages/Login'
+import Signup from '../../pages/Signup'
+import PasswordForgetForm from '../../pages/PasswordForgetForm'
+import PrivateRoute from './PrivateRoute'
 import Playbill from '../../pages/Playbill'
 import QuestionsOne from '../../pages/QuestionsOne/QuestionOne'
 import PlaybillTwoA from '../../pages/QuestionsTwo/PlaybillTwoA'
@@ -14,9 +17,15 @@ import QuestionsTwoC from '../../pages/QuestionsTwo/QuestionTwoC'
 import PlaybillThreeAA from '../../pages/QuestionsThree/PlaybillThreeAA'
 import PlaybillThreeAB from '../../pages/QuestionsThree/PlaybillThreeAB'
 import PlaybillThreeAC from '../../pages/QuestionsThree/PlaybillThreeAC'
-import QuestionsThreeA from '../../pages/QuestionsThree/QuestionThreeA'
-import QuestionsThreeB from '../../pages/QuestionsThree/QuestionThreeB'
-import QuestionsThreeC from '../../pages/QuestionsThree/QuestionThreeC'
+import QuestionsThreeAA from '../../pages/QuestionsThree/QuestionThreeAA'
+import QuestionsThreeAB from '../../pages/QuestionsThree/QuestionThreeAB'
+import QuestionsThreeAC from '../../pages/QuestionsThree/QuestionThreeAC'
+import PlaybillFourAAA from '../../pages/Finale/PlaybillFourAAA'
+import PlaybillFourAAB from '../../pages/Finale/PlaybillFourAAB'
+import PlaybillFourAAC from '../../pages/Finale/PlaybillFourAAC'
+import ResultsAAA from '../../pages/Results/ResultsAAA'
+import ResultsAAB from '../../pages/Results/ResultsAAB'
+import ResultsAAC from '../../pages/Results/ResultsAAC'
 
 
 export default ({ doSetCurrentUser }) => (
@@ -27,11 +36,19 @@ export default ({ doSetCurrentUser }) => (
       path='/login'
       render={() => <Login doSetCurrentUser={doSetCurrentUser} />}
     />
-    <Route
-      exact
-      path='/playbill'
-      render={() => <Playbill doSetCurrentUser={doSetCurrentUser} />}
+    <Route 
+      exact 
+      path='/signup' 
+      render={props => <Signup {...props} />} 
     />
+    <Route 
+      exact 
+      path='/password-forget' 
+      component={PasswordForgetForm} 
+    />
+    <PrivateRoute exact path='/playbill'>
+      <Playbill doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
     <Route
       exact
       path='/questions-one'
@@ -84,18 +101,36 @@ export default ({ doSetCurrentUser }) => (
     />
     <Route
       exact
-      path='/questions-three-a'
-      render={() => <QuestionsThreeA doSetCurrentUser={doSetCurrentUser} />}
+      path='/questions-three-aa'
+      render={() => <QuestionsThreeAA doSetCurrentUser={doSetCurrentUser} />}
     />
     <Route
       exact
-      path='/questions-three-b'
-      render={() => <QuestionsThreeB doSetCurrentUser={doSetCurrentUser} />}
+      path='/questions-three-ab'
+      render={() => <QuestionsThreeAB doSetCurrentUser={doSetCurrentUser} />}
     />
     <Route
       exact
-      path='/questions-three-c'
-      render={() => <QuestionsThreeC doSetCurrentUser={doSetCurrentUser} />}
+      path='/questions-three-ac'
+      render={() => <QuestionsThreeAC doSetCurrentUser={doSetCurrentUser} />}
     />
+    <PrivateRoute exact path='/playbill-four-aaa'>
+      <PlaybillFourAAA doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/playbill-four-aab'>
+      <PlaybillFourAAB doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/playbill-four-aac'>
+      <PlaybillFourAAC doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-aaa'>
+      <ResultsAAA doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-aab'>
+      <ResultsAAB doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-aac'>
+      <ResultsAAC doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
   </Switch>
 )
