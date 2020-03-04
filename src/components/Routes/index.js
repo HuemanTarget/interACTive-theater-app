@@ -6,10 +6,11 @@ import Login from '../../pages/Login'
 import Playbill from '../../pages/Playbill'
 import QuestionsOne from '../../pages/QuestionsOne/QuestionOne'
 import QuestionsTwoA from '../../pages/QuestionsTwo/QuestionTwoA'
+import PlaybillTwoA from '../../pages/QuestionsTwo/PlaybillTwoA'
+import PlaybillTwoB from '../../pages/QuestionsTwo/PlaybillTwoB'
+import PlaybillTwoC from '../../pages/QuestionsTwo/PlaybillTwoC'
 import QuestionsTwoB from '../../pages/QuestionsTwo/QuestionTwoB'
 import QuestionsTwoC from '../../pages/QuestionsTwo/QuestionTwoC'
-import QuestionsTwoD from '../../pages/QuestionsTwo/QuestionTwoD'
-import QuestionsTwoE from '../../pages/QuestionsTwo/QuestionTwoE'
 import QuestionsThreeA from '../../pages/QuestionsThree/QuestionThreeA'
 import QuestionsThreeB from '../../pages/QuestionsThree/QuestionThreeB'
 import QuestionsThreeC from '../../pages/QuestionsThree/QuestionThreeC'
@@ -41,6 +42,11 @@ export default ({ doSetCurrentUser }) => (
     />
     <Route
       exact
+      path='/playbill-two-a'
+      render={() => <PlaybillTwoA doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
       path='/questions-two-a'
       render={() => <QuestionsTwoA doSetCurrentUser={doSetCurrentUser} />}
     />
@@ -53,16 +59,6 @@ export default ({ doSetCurrentUser }) => (
       exact
       path='/questions-two-c'
       render={() => <QuestionsTwoC doSetCurrentUser={doSetCurrentUser} />}
-    />
-    <Route
-      exact
-      path='/questions-two-d'
-      render={() => <QuestionsTwoD doSetCurrentUser={doSetCurrentUser} />}
-    />
-    <Route
-      exact
-      path='/questions-two-e'
-      render={() => <QuestionsTwoE doSetCurrentUser={doSetCurrentUser} />}
     />
     <Route
       exact

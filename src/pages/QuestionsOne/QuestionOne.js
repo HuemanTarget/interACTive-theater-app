@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom'
 import { useSession } from '../../App'
-import Firebase from '../../components/Firebase/firebase'
-import firebase from 'firebase'
+// import Firebase from '../../components/Firebase/firebase'
+// import firebase from 'firebase'
 import Progress from '../QuestionsOne/Progress'
 import Question from '../QuestionsOne/Question'
 import Answers from '../QuestionsOne/Answers'
@@ -30,26 +30,23 @@ function QuestionOne(props) {
     {
         id: 1,
         question: 'Who was just murdered?',
-        answer_a: 'Sir Kennsignton',
-        answer_b: 'Martha Blackwood',
-        answer_c: 'Anderson Brinkley',
-        answer_d: 'Brandon Aldridge',
+        answer_a: 'Professor Donk',
+        answer_b: 'Ernie Middleware',
+        answer_c: 'The Sophias',
     },
     {
         id: 2,
         question: 'How were they murdered?',
-        answer_a: 'Knife in the back.',
-        answer_b: 'Poison.',
+        answer_a: 'Poison Sake',
+        answer_b: 'Sausage Asphyxiation',
         answer_c: 'Candlestick to the head.',
-        answer_d: 'Stranglation',
     },
     {
         id: 3,
-        question: 'Who do you think was the murderer?',
-        answer_a: 'Samantha Spiney',
-        answer_b: 'Bruce Santos',
-        answer_c: 'Elizabeth Hershey',
-        answer_d: 'Demarcus Michaels',
+        question: 'What was your favorite language you learned?',
+        answer_a: 'JavaScript / React',
+        answer_b: 'Express / NodeJS',
+        answer_c: 'Python / Django',
     },
   ];
     
@@ -70,33 +67,33 @@ function QuestionOne(props) {
 
   }
 
-  const handleSubmit = async event => {
-    // event.preventDefault()
-    const batch = Firebase.db.batch()
-    const userRef = Firebase.db.collection('users').doc(user.uid)
-    try {
-      // Create a new post doc with auto ID locally
-      const newAnswerRef = Firebase.db.collection('answersOne').doc()
-      // add batch op to set post data including logged in uid
-      const answer = {
-        questionOne: questions[0].question,
-        answerOne: answers[0].answer,
-        questionTwo: questions[1].question,
-        answerTwo: answers[1].answer,
-        questionsThree: questions[2].question,
-        answerThree: answers[2].answer,
-        lastModified: firebase.firestore.FieldValue.serverTimestamp(),
-        uid: user.uid,
-      }
-      batch.set(newAnswerRef, answer)
+  // const handleSubmit = async event => {
+  //   // event.preventDefault()
+  //   const batch = Firebase.db.batch()
+  //   const userRef = Firebase.db.collection('users').doc(user.uid)
+  //   try {
+  //     // Create a new post doc with auto ID locally
+  //     const newAnswerRef = Firebase.db.collection('answersOne').doc()
+  //     // add batch op to set post data including logged in uid
+  //     const answer = {
+  //       questionOne: questions[0].question,
+  //       answerOne: answers[0].answer,
+  //       questionTwo: questions[1].question,
+  //       answerTwo: answers[1].answer,
+  //       questionsThree: questions[2].question,
+  //       answerThree: answers[2].answer,
+  //       lastModified: firebase.firestore.FieldValue.serverTimestamp(),
+  //       uid: user.uid,
+  //     }
+  //     batch.set(newAnswerRef, answer)
   
-      batch.commit().then(() => {
-        console.log('Added new post', newAnswerRef.id)
-      })
-    } catch (error) {
-      console.error('Error adding document: ', error)
-    }
-  }
+  //     batch.commit().then(() => {
+  //       console.log('Added new post', newAnswerRef.id)
+  //     })
+  //   } catch (error) {
+  //     console.error('Error adding document: ', error)
+  //   }
+  // }
   
 
 
@@ -147,45 +144,36 @@ function QuestionOne(props) {
     let a = ["A","A","A"];
     let b = ["B","B","B"];
     let c = ["C","C","C"];
-    let d = ["A","B","C"];
     
     if (a[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/questions-two-a'>
-            Questions Two
+          <NavLink exact to='/playbill-two-a'>
+            Continue The Story
           </NavLink>
         </div>
       )
     }else if(b[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/questions-two-b'>
-            Questions Two
+          <NavLink exact to='/playbill-two-b'>
+            Continue The Story
           </NavLink>
         </div>
       )
     }else if(c[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/questions-two-c'>
-            Questions Two
-          </NavLink>
-        </div>
-      )
-    }else if(d[0] === answers[0].answer) {
-      return(
-        <div>
-          <NavLink exact to='/questions-two-d'>
-            Questions Two
+          <NavLink exact to='/playbill-two-c'>
+            Continue The Story
           </NavLink>
         </div>
       )
     }else{
       return(
         <div>
-          <NavLink exact to='/questions-two-e'>
-            Questions Two
+          <NavLink exact to='/playbill-two-c'>
+            Continue The Story
           </NavLink>
         </div>
       )
@@ -204,7 +192,7 @@ function QuestionOne(props) {
           {/* {renderResultsData()} */}
           
           {nextQuestion()}
-          {handleSubmit()}
+          {/* {handleSubmit()} */}
       </div>
     )
   }else{
