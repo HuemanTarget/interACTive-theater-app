@@ -1,5 +1,6 @@
 import React from 'react';
 import FlipPage from "react-flip-page";
+import { NavLink } from 'react-router-dom'
 
 import './style.css';
 
@@ -14,15 +15,18 @@ const Playbill = () => {
 
     const pages = [
         { 
+            page: 1,
             title: "Murder On The Cohort Express", 
             picture: <img src="https://media.newyorker.com/photos/5a0dbe6e2c4e135599ca7016/master/w_1600%2Cc_limit/171127_r31016.jpg" width="360" alt="computer" />,
             titletwo: "An InterACTive Murder Mystery" 
         },
         { 
+            page: 2,
             title: "How This Works", 
             content: "You will be given a series of questions during the story. Your answers change how the story moves forward. There are twenty seven different story lines available. Can you find them all?" 
         },
         { 
+            page: 3,
             title: "Cast Of Characters",
             titletwo: "1). Professor Donk", 
             contenttwo: "Professor of Child Studies",
@@ -34,6 +38,7 @@ const Playbill = () => {
             contentfive: "Black Magic Mamma (She made me write this)",
         },
         { 
+            page: 4,
             title: "Cast Contd",
             titletwo: "5). DJ Galindo", 
             contenttwo: "Mixes Massive Beats and Jams",
@@ -43,17 +48,32 @@ const Playbill = () => {
             contentfour: "Player / Owner of the Basketball Dynasty Blakers",
         },
         { 
+            page: 5,
             title: "Story",
             content: "It was a night much like every other night when seven members of the SEI-69 Cohort were invited on the exclusive Cohort Express for a trip from DTLA to Universal Studios Hollywood. Not knowing who invited them there, the group assembled in the dinning car for a meal fit for royalty, Papa Johns. As the scrumptious meal of cold bread sticks, dried chicken balls, and shriveled pizza were served to the guests. The lights went out and a scream was heard.", 
         }
     ];
 
+    const questionsOne = () => {
+        if(pages.page === pages[4].page) {
+            return(
+                <NavLink exact to='/questions-one'>
+                    Questions One
+                </NavLink>
+            )
+        }else{
+            return(
+                <h3>Swipe left to next page.</h3>
+            )
+        }
+    }
     
         
     
     
     return(
         <div>
+            {questionsOne()}
             <div className="app">
             <FlipPage
                 className="book"
