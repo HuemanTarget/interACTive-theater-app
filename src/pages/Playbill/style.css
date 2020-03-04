@@ -1,0 +1,16 @@
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+.book {
+    border: 1px solid black;
+  }
+
+.page {
+    text-align: left;
+}

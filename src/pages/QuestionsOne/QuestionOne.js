@@ -22,7 +22,6 @@ function QuestionOne(props) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [currentAnswer, setCurrentAnswer] = useState('');
   const [answers, setAnswers] = useState([]);
-  const [answerInput, setAnswerInput] = useState('')
   const [showResults, setShowResults] = useState(false);
   const [error, setError] = useState('');
   // const [answersA, setAnswersA] = useState([1,2,3]);
@@ -72,30 +71,31 @@ function QuestionOne(props) {
   }
 
   const handleSubmit = async event => {
-    event.preventDefault()
+    // event.preventDefault()
     const batch = Firebase.db.batch()
     const userRef = Firebase.db.collection('users').doc(user.uid)
     try {
       // Create a new post doc with auto ID locally
-      const newAnswerRef = Firebase.db.collection('answers').doc()
+      const newAnswerRef = Firebase.db.collection('answersOne').doc()
       // add batch op to set post data including logged in uid
-      batch.set(newAnswerRef, {
-        title: answerInput,
+      const answer = {
+        questionOne: questions[0].question,
+        answerOne: answers[0].answer,
+        questionTwo: questions[1].question,
+        answerTwo: answers[1].answer,
+        questionsThree: questions[2].question,
+        answerThree: answers[2].answer,
         lastModified: firebase.firestore.FieldValue.serverTimestamp(),
         uid: user.uid,
-      })
-      // add batch op to update user posts array
-      batch.update(userRef, {
-        posts: firebase.firestore.FieldValue.arrayUnion(newAnswerRef.id),
-      })
-      // commit batch ops
+      }
+      batch.set(newAnswerRef, answer)
+  
       batch.commit().then(() => {
         console.log('Added new post', newAnswerRef.id)
       })
     } catch (error) {
       console.error('Error adding document: ', error)
     }
-    setAnswerInput('')
   }
   
 
@@ -202,16 +202,18 @@ function QuestionOne(props) {
         </h2>
         <br/>
           {/* {renderResultsData()} */}
+          
           {nextQuestion()}
+          {handleSubmit()}
       </div>
     )
   }else{
   return (
     <div className='container'>
-    <form
+    {/* <form
         onSubmit={handleSubmit}
         style={{ marginTop: '.5em', marginBottom: '.5em' }}
-    >
+    > */}
       <Progress total={questions.length} current={currentQuestion + 1} />
       <Question question={question.question} />
       {renderError()}
@@ -219,7 +221,7 @@ function QuestionOne(props) {
       <button className='btn btn-primary' onClick={next}>
         Confirm And Continue
       </button>
-    </form>
+    {/* </form> */}
     </div>
   );
   }
