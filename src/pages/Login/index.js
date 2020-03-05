@@ -38,7 +38,7 @@ const Login = () => {
     }
   }
   if (user) {
-    return <Redirect to='/playbill' />
+    return <Redirect exact to='/playbill' />;
   }
   return (
     <div>
