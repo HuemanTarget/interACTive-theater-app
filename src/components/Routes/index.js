@@ -17,6 +17,12 @@ import QuestionsTwoC from '../../pages/QuestionsTwo/QuestionTwoC'
 import PlaybillThreeAA from '../../pages/QuestionsThree/PlaybillThreeAA'
 import PlaybillThreeAB from '../../pages/QuestionsThree/PlaybillThreeAB'
 import PlaybillThreeAC from '../../pages/QuestionsThree/PlaybillThreeAC'
+import PlaybillThreeBA from '../../pages/QuestionsThree/PlaybillThreeBA'
+import PlaybillThreeBB from '../../pages/QuestionsThree/PlaybillThreeBB'
+import PlaybillThreeBC from '../../pages/QuestionsThree/PlaybillThreeBC'
+import PlaybillThreeCA from '../../pages/QuestionsThree/PlaybillThreeCA'
+import PlaybillThreeCB from '../../pages/QuestionsThree/PlaybillThreeCB'
+import PlaybillThreeCC from '../../pages/QuestionsThree/PlaybillThreeCC'
 import QuestionsThreeAA from '../../pages/QuestionsThree/QuestionThreeAA'
 import QuestionsThreeAB from '../../pages/QuestionsThree/QuestionThreeAB'
 import QuestionsThreeAC from '../../pages/QuestionsThree/QuestionThreeAC'
@@ -152,6 +158,36 @@ export default ({ doSetCurrentUser }) => (
       exact
       path='/playbill-three-ac'
       render={() => <PlaybillThreeAC doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/playbill-three-ba'
+      render={() => <PlaybillThreeBA doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/playbill-three-bb'
+      render={() => <PlaybillThreeBB doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/playbill-three-bc'
+      render={() => <PlaybillThreeBC doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/playbill-three-ca'
+      render={() => <PlaybillThreeCA doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/playbill-three-cb'
+      render={() => <PlaybillThreeCB doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/playbill-three-cc'
+      render={() => <PlaybillThreeCC doSetCurrentUser={doSetCurrentUser} />}
     />
     <Route
       exact

@@ -20,7 +20,8 @@ const PlaybillThreeAB = () => {
         },
         { 
             page: 2,
-            content: "They open up the closet and find Papa Greg tied up. The Sophias removes the gag and Papa Greg proceeds to tell the group that he knows who the murderer is. The murderer is..."
+            content: "They open up the closet and find Papa Greg tied up. The Sophias removes the gag and Papa Greg proceeds to tell the group that he knows who the murderer is. The murderer is...",
+            link: <NavLink exact to='/questions-three-ab'>Last Question</NavLink>
         },
     ];
 
@@ -30,9 +31,6 @@ const PlaybillThreeAB = () => {
     
     return(
         <div>
-            <NavLink exact to='/questions-three-ab'>
-                Last Question
-            </NavLink>
             <div className="app">
             <FlipPage
                 className="book"
@@ -47,6 +45,7 @@ const PlaybillThreeAB = () => {
             {pages.map(page => (
             <article style={{ width: "400px ", padding: "10px 20px" }}>
                 <p className='page'>{page.content}</p>
+                <p>{page.link}</p>
             </article>
             ))}
             </FlipPage>
