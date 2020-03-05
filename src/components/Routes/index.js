@@ -103,67 +103,67 @@ export default ({ doSetCurrentUser }) => (
     <PrivateRoute exact path='/playbill'>
       <Playbill doSetCurrentUser={doSetCurrentUser} />
     </PrivateRoute>
-    <Route
+    <PrivateRoute
       exact
       path='/questions-one'
       render={() => <QuestionsOne doSetCurrentUser={doSetCurrentUser} />}
     />
-    <Route
+    <PrivateRoute
       exact
       path='/playbill-two-a'
       render={() => <PlaybillTwoA doSetCurrentUser={doSetCurrentUser} />}
     />
-    <Route
+    <PrivateRoute
       exact
       path='/playbill-two-b'
       render={() => <PlaybillTwoB doSetCurrentUser={doSetCurrentUser} />}
     />
-    <Route
+    <PrivateRoute
       exact
       path='/playbill-two-c'
       render={() => <PlaybillTwoC doSetCurrentUser={doSetCurrentUser} />}
     />
-    <Route
+    <PrivateRoute
       exact
       path='/questions-two-a'
       render={() => <QuestionsTwoA doSetCurrentUser={doSetCurrentUser} />}
     />
-    <Route
+    <PrivateRoute
       exact
       path='/questions-two-b'
       render={() => <QuestionsTwoB doSetCurrentUser={doSetCurrentUser} />}
     />
-    <Route
+    <PrivateRoute
       exact
       path='/questions-two-c'
       render={() => <QuestionsTwoC doSetCurrentUser={doSetCurrentUser} />}
     />
-    <Route
+    <PrivateRoute
       exact
       path='/playbill-three-aa'
       render={() => <PlaybillThreeAA doSetCurrentUser={doSetCurrentUser} />}
     />
-    <Route
+    <PrivateRoute
       exact
       path='/playbill-three-ab'
       render={() => <PlaybillThreeAB doSetCurrentUser={doSetCurrentUser} />}
     />
-    <Route
+    <PrivateRoute
       exact
       path='/playbill-three-ac'
       render={() => <PlaybillThreeAC doSetCurrentUser={doSetCurrentUser} />}
     />
-    <Route
+    <PrivateRoute
       exact
       path='/questions-three-aa'
       render={() => <QuestionsThreeAA doSetCurrentUser={doSetCurrentUser} />}
     />
-    <Route
+    <PrivateRoute
       exact
       path='/questions-three-ab'
       render={() => <QuestionsThreeAB doSetCurrentUser={doSetCurrentUser} />}
     />
-    <Route
+    <PrivateRoute
       exact
       path='/questions-three-ac'
       render={() => <QuestionsThreeAC doSetCurrentUser={doSetCurrentUser} />}
@@ -222,17 +222,17 @@ export default ({ doSetCurrentUser }) => (
     <PrivateRoute exact path='/results-acc'>
       <ResultsACC doSetCurrentUser={doSetCurrentUser} />
     </PrivateRoute>
-    <Route
+    <PrivateRoute
       exact
       path='/questions-three-ba'
       render={() => <QuestionsThreeBA doSetCurrentUser={doSetCurrentUser} />}
     />
-    <Route
+    <PrivateRoute
       exact
       path='/questions-three-bb'
       render={() => <QuestionsThreeBB doSetCurrentUser={doSetCurrentUser} />}
     />
-    <Route
+    <PrivateRoute
       exact
       path='/questions-three-bc'
       render={() => <QuestionsThreeBC doSetCurrentUser={doSetCurrentUser} />}
@@ -291,17 +291,17 @@ export default ({ doSetCurrentUser }) => (
     <PrivateRoute exact path='/results-bcc'>
       <ResultsBCC doSetCurrentUser={doSetCurrentUser} />
     </PrivateRoute>
-    <Route
+    <PrivateRoute
       exact
       path='/questions-three-ca'
       render={() => <QuestionsThreeCA doSetCurrentUser={doSetCurrentUser} />}
     />
-    <Route
+    <PrivateRoute
       exact
       path='/questions-three-cb'
       render={() => <QuestionsThreeCB doSetCurrentUser={doSetCurrentUser} />}
     />
-    <Route
+    <PrivateRoute
       exact
       path='/questions-three-cc'
       render={() => <QuestionsThreeCC doSetCurrentUser={doSetCurrentUser} />}
