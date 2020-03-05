@@ -59,6 +59,27 @@ import PlaybillFourBCC from '../../pages/Finale/PlaybillFourBCC'
 import ResultsBCA from '../../pages/Results/ResultsBCA'
 import ResultsBCB from '../../pages/Results/ResultsBCB'
 import ResultsBCC from '../../pages/Results/ResultsBCC'
+import QuestionsThreeCA from '../../pages/QuestionsThree/QuestionThreeCA'
+import QuestionsThreeCB from '../../pages/QuestionsThree/QuestionThreeCB'
+import QuestionsThreeCC from '../../pages/QuestionsThree/QuestionThreeCC'
+import PlaybillFourCAA from '../../pages/Finale/PlaybillFourCAA'
+import PlaybillFourCAB from '../../pages/Finale/PlaybillFourCAB'
+import PlaybillFourCAC from '../../pages/Finale/PlaybillFourCAC'
+import ResultsCAA from '../../pages/Results/ResultsCAA'
+import ResultsCAB from '../../pages/Results/ResultsCAB'
+import ResultsCAC from '../../pages/Results/ResultsCAC'
+import PlaybillFourCBA from '../../pages/Finale/PlaybillFourCBA'
+import PlaybillFourCBB from '../../pages/Finale/PlaybillFourCBB'
+import PlaybillFourCBC from '../../pages/Finale/PlaybillFourCBC'
+import ResultsCBA from '../../pages/Results/ResultsCBA'
+import ResultsCBB from '../../pages/Results/ResultsCBB'
+import ResultsCBC from '../../pages/Results/ResultsCBC'
+import PlaybillFourCCA from '../../pages/Finale/PlaybillFourCCA'
+import PlaybillFourCCB from '../../pages/Finale/PlaybillFourCCB'
+import PlaybillFourCCC from '../../pages/Finale/PlaybillFourCCC'
+import ResultsCCA from '../../pages/Results/ResultsCCA'
+import ResultsCCB from '../../pages/Results/ResultsCCB'
+import ResultsCCC from '../../pages/Results/ResultsCCC'
 
 
 export default ({ doSetCurrentUser }) => (
@@ -269,6 +290,75 @@ export default ({ doSetCurrentUser }) => (
     </PrivateRoute>
     <PrivateRoute exact path='/results-bcc'>
       <ResultsBCC doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <Route
+      exact
+      path='/questions-three-ca'
+      render={() => <QuestionsThreeCA doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/questions-three-cb'
+      render={() => <QuestionsThreeCB doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/questions-three-cc'
+      render={() => <QuestionsThreeCC doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <PrivateRoute exact path='/playbill-four-caa'>
+      <PlaybillFourCAA doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/playbill-four-cab'>
+      <PlaybillFourCAB doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/playbill-four-cac'>
+      <PlaybillFourCAC doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-caa'>
+      <ResultsCAA doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-cab'>
+      <ResultsCAB doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-cac'>
+      <ResultsCAC doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/playbill-four-cba'>
+      <PlaybillFourCBA doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/playbill-four-cbb'>
+      <PlaybillFourCBB doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/playbill-four-cbc'>
+      <PlaybillFourCBC doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-cba'>
+      <ResultsCBA doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-cbb'>
+      <ResultsCBB doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-cbc'>
+      <ResultsCBC doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/playbill-four-cca'>
+      <PlaybillFourCCA doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/playbill-four-ccb'>
+      <PlaybillFourCCB doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/playbill-four-ccc'>
+      <PlaybillFourCCC doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-cca'>
+      <ResultsCCA doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-ccb'>
+      <ResultsCCB doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-ccc'>
+      <ResultsCCC doSetCurrentUser={doSetCurrentUser} />
     </PrivateRoute>
   </Switch>
 )
