@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 import './style.css';
 
-const PlaybillFourAAA = () => {
+const PlaybillFourBAC = () => {
 
 
     const pages = [
@@ -48,4 +48,4 @@ const PlaybillFourAAA = () => {
         </div>
     )
 }
-export default PlaybillFourAAA;
+export default PlaybillFourBAC;

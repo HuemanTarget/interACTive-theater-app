@@ -4,22 +4,19 @@ import { NavLink } from 'react-router-dom'
 
 import './style.css';
 
-const PlaybillFourBAB = () => {
+const PlaybillFourBBA = () => {
 
 
     const pages = [
         { 
             page: 1,
-            content: "The Sophias are the murderers. But why did you do it Sophias?"
+            content: "Professor Donk is the murderer. But why did you do it Professor Donk?"
         },
         { 
             page: 2,
-            content: "Ernie left one of us at the alter and if you mess with one Sophia you deal with us both and Mustang Zane was trying to sell our nude pics to TMZ and had to be stopped. I would've gotten away with it all if it wasn't for you meddling students and your damn teachers."
+            content: "Ernie was putting addictive chemicals into his sauce I became an addict and had to shut him down and Blake promised me a player from the Blakers to come by and they didn't so I was mad.. I would've gotten away with it all if it wasn't for you meddling students and your damn teachers."
         },
     ];   
-
-    
-        
     
     
     return(
@@ -42,10 +39,10 @@ const PlaybillFourBAB = () => {
             ))}
             </FlipPage>
             </div>
-            <NavLink exact to='/results-bab'>
+            <NavLink exact to='/results-bba'>
                 Results
             </NavLink>
         </div>
     )
 }
-export default PlaybillFourBAB;
+export default PlaybillFourBBA;

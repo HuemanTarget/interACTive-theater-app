@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 import './style.css';
 
-const PlaybillFourBAB = () => {
+const PlaybillFourBBB = () => {
 
 
     const pages = [
@@ -14,7 +14,7 @@ const PlaybillFourBAB = () => {
         },
         { 
             page: 2,
-            content: "Ernie left one of us at the alter and if you mess with one Sophia you deal with us both and Mustang Zane was trying to sell our nude pics to TMZ and had to be stopped. I would've gotten away with it all if it wasn't for you meddling students and your damn teachers."
+            content: "Ernie left one of us at the alter and if you mess with one Sophia you deal with us both and Blake made fun of us on Instagram and we play for keeps. I would've gotten away with it all if it wasn't for you meddling students and your damn teachers."
         },
     ];   
 
@@ -42,10 +42,10 @@ const PlaybillFourBAB = () => {
             ))}
             </FlipPage>
             </div>
-            <NavLink exact to='/results-bab'>
+            <NavLink exact to='/results-bbb'>
                 Results
             </NavLink>
         </div>
     )
 }
-export default PlaybillFourBAB;
+export default PlaybillFourBBB;
