@@ -14,7 +14,8 @@ const PlaybillFourBBA = () => {
         },
         { 
             page: 2,
-            content: "Ernie was putting addictive chemicals into his sauce I became an addict and had to shut him down and Blake promised me a player from the Blakers to come by and they didn't so I was mad.. I would've gotten away with it all if it wasn't for you meddling students and your damn teachers."
+            content: "Ernie was putting addictive chemicals into his sauce I became an addict and had to shut him down and Blake promised me a player from the Blakers to come by and they didn't so I was mad.. I would've gotten away with it all if it wasn't for you meddling students and your damn teachers.",
+            link: <NavLink exact to='/results-bba'>Results</NavLink>
         },
     ];   
     
@@ -27,21 +28,19 @@ const PlaybillFourBBA = () => {
                 showSwipeHint
                 uncutPages
                 orientation="horizontal"
-                width="440"
-                height="600"
+                width="450"
+                height="650"
                 pageBackground="#fffdf8"
                 animationDuration="400"
             >
             {pages.map(page => (
             <article style={{ width: "400px ", padding: "10px 20px" }}>
                 <p className='page'>{page.content}</p>
+                <p>{page.link}</p>
             </article>
             ))}
             </FlipPage>
             </div>
-            <NavLink exact to='/results-bba'>
-                Results
-            </NavLink>
         </div>
     )
 }

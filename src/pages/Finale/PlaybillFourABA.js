@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 import './style.css';
 
-const PlaybillFourAAA = () => {
+const PlaybillFourABA = () => {
 
 
     const pages = [
@@ -14,7 +14,8 @@ const PlaybillFourAAA = () => {
         },
         { 
             page: 2,
-            content: "Professor Donk was trying to persuade my child laborers to leave my Sriracha Factory so he had to go and DJ Galindo released a diss track on his latest album making fun of my sauce and NO ONE does that.. I would've gotten away with it all if it wasn't for you meddling students and your damn teachers."
+            content: "Professor Donk was trying to persuade my child laborers to leave my Sriracha Factory so he had to go and DJ Galindo released a diss track on his latest album making fun of my sauce and NO ONE does that.. I would've gotten away with it all if it wasn't for you meddling students and your damn teachers.",
+            link: <NavLink exact to='/results-aba'>Results</NavLink>
         },
     ];
 
@@ -30,22 +31,20 @@ const PlaybillFourAAA = () => {
                 showSwipeHint
                 uncutPages
                 orientation="horizontal"
-                width="440"
-                height="600"
+                width="450"
+                height="650"
                 pageBackground="#fffdf8"
                 animationDuration="400"
             >
             {pages.map(page => (
             <article style={{ width: "400px ", padding: "10px 20px" }}>
                 <p className='page'>{page.content}</p>
+                <p>{page.link}</p>
             </article>
             ))}
             </FlipPage>
             </div>
-            <NavLink exact to='/results-aba'>
-                Results
-            </NavLink>
         </div>
     )
 }
-export default PlaybillFourAAA;
+export default PlaybillFourABA;

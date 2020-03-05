@@ -14,7 +14,8 @@ const PlaybillFourBAC = () => {
         },
         { 
             page: 2,
-            content: "Ernie ruined my music festival with tainted Sriracha sauce and Mustang Zane was suppose to perform on the main stage for the ladies but was a no show and kept the deposit. I would've gotten away with it all if it wasn't for you meddling students and your damn teachers."
+            content: "Ernie ruined my music festival with tainted Sriracha sauce and Mustang Zane was suppose to perform on the main stage for the ladies but was a no show and kept the deposit. I would've gotten away with it all if it wasn't for you meddling students and your damn teachers.",
+            link: <NavLink exact to='/results-bac'>Results</NavLink>
         },
     ];
 
@@ -30,21 +31,19 @@ const PlaybillFourBAC = () => {
                 showSwipeHint
                 uncutPages
                 orientation="horizontal"
-                width="440"
-                height="600"
+                width="450"
+                height="650"
                 pageBackground="#fffdf8"
                 animationDuration="400"
             >
             {pages.map(page => (
             <article style={{ width: "400px ", padding: "10px 20px" }}>
                 <p className='page'>{page.content}</p>
+                <p>{page.link}</p>
             </article>
             ))}
             </FlipPage>
             </div>
-            <NavLink exact to='/results-bac'>
-                Results
-            </NavLink>
         </div>
     )
 }
