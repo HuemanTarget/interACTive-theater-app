@@ -8,7 +8,7 @@ import Answers from './Answers'
 import './style.css';
 
 
-function QuestionsThreeAA() {
+function QuestionsThreeBA() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [currentAnswer, setCurrentAnswer] = useState('');
   const [answers, setAnswers] = useState([]);
@@ -20,9 +20,9 @@ function QuestionsThreeAA() {
     {
         id: 1,
         question: 'Who is the murderer?',
-        answer_a: 'Ernie Middleware',
-        answer_b: 'Blake Johnson',
-        answer_c: 'Mustang Zane',
+        answer_a: 'Professor Donk',
+        answer_b: 'The Sophias',
+        answer_c: 'DJ Galindo',
     },
   ];
     
@@ -95,7 +95,7 @@ function QuestionsThreeAA() {
     if (a[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/playbill-four-aaa'>
+          <NavLink exact to='/playbill-four-baa'>
             Question Four
           </NavLink>
         </div>
@@ -103,7 +103,7 @@ function QuestionsThreeAA() {
     }else if(b[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/playbill-four-aab'>
+          <NavLink exact to='/playbill-four-bab'>
             Question Four
           </NavLink>
         </div>
@@ -111,7 +111,7 @@ function QuestionsThreeAA() {
     }else if(c[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/playbill-four-aac'>
+          <NavLink exact to='/playbill-four-bac'>
             Question Four
           </NavLink>
         </div>
@@ -119,7 +119,7 @@ function QuestionsThreeAA() {
     }else{
       return(
         <div>
-          <NavLink exact to='/playbill-four-aac'>
+          <NavLink exact to='/playbill-four-bac'>
             Question Four
           </NavLink>
         </div>
@@ -155,4 +155,4 @@ function QuestionsThreeAA() {
   }
 }
 
-export default QuestionsThreeAA;
+export default QuestionsThreeBA;

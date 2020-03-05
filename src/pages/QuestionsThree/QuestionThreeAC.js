@@ -8,7 +8,7 @@ import Answers from './Answers'
 import './style.css';
 
 
-function QuestionsThreeA() {
+function QuestionsThreeAC() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [currentAnswer, setCurrentAnswer] = useState('');
   const [answers, setAnswers] = useState([]);
@@ -155,4 +155,4 @@ function QuestionsThreeA() {
   }
 }
 
-export default QuestionsThreeA;
+export default QuestionsThreeAC;

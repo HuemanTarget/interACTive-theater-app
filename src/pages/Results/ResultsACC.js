@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
 
-const ResultsABC = () => {
+const ResultsACC = () => {
     return(
         <div>
             <h1>1 - Professor Donk Was Murdered First.</h1>
@@ -15,4 +15,4 @@ const ResultsABC = () => {
     )
 }
 
-export default ResultsABC;
+export default ResultsACC;
