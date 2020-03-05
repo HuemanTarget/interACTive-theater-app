@@ -14,7 +14,8 @@ const PlaybillFourAAA = () => {
         },
         { 
             page: 2,
-            content: "Professor Donk was trying to persuade my child laborers to leave my Sriracha Factory so he had to go and Bitana The Great made had a day job as a County Health Inspector and was trying to shut me down for health code violations. I would've gotten away with it all if it wasn't for you meddling students and your damn teachers."
+            content: "Professor Donk was trying to persuade my child laborers to leave my Sriracha Factory so he had to go and Bitana The Great made had a day job as a County Health Inspector and was trying to shut me down for health code violations. I would've gotten away with it all if it wasn't for you meddling students and your damn teachers.",
+            link: <NavLink exact to='/results-aaa'>Results</NavLink>
         },
     ];
 
@@ -37,7 +38,7 @@ const PlaybillFourAAA = () => {
             >
             {pages.map(page => (
             <article style={{ width: "400px ", padding: "10px 20px" }}>
-                <p className='page'>{page.content}</p>
+                <p className='page'>{page.content}{page.link}</p>
             </article>
             ))}
             </FlipPage>

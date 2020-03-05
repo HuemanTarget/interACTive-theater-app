@@ -50,38 +50,22 @@ const Playbill = () => {
         { 
             page: 5,
             title: "Story",
-            content: "It was a night much like every other night when seven members of the SEI-69 Cohort were invited on the exclusive Cohort Express for a trip from DTLA to Universal Studios Hollywood. Not knowing who invited them there, the group assembled in the dinning car for a meal fit for royalty, Papa Johns. As the scrumptious meal of cold bread sticks, dried chicken balls, and shriveled pizza were served to the guests. The lights went out and a scream was heard.", 
+            content: "It was a night much like every other night when seven members of the SEI-69 Cohort were invited on the exclusive Cohort Express for a trip from DTLA to Universal Studios Hollywood. Not knowing who invited them there, the group assembled in the dinning car for a meal fit for royalty, Papa Johns. As the scrumptious meal of cold bread sticks, dried chicken balls, and shriveled pizza were served to the guests. The lights went out and a scream was heard.",
+            link: <NavLink exact to='/questions-one'>Questions One</NavLink>
         }
     ];
 
-    const questionsOne = () => {
-        if(pages.page === pages[4].page) {
-            return(
-                <NavLink exact to='/questions-one'>
-                    Questions One
-                </NavLink>
-            )
-        }else{
-            return(
-                <h3>Swipe left to next page.</h3>
-            )
-        }
-    }
-    
-        
-    
     
     return(
         <div>
-            {questionsOne()}
             <div className="app">
             <FlipPage
                 className="book"
                 showSwipeHint
                 uncutPages
                 orientation="horizontal"
-                width="440"
-                height="600"
+                width="450"
+                height="650"
                 pageBackground="#fffdf8"
                 animationDuration="400"
             >
@@ -98,6 +82,7 @@ const Playbill = () => {
                 <p>{page.titlefive}</p>
                 <p>{page.contentfive}</p>
                 <p className='page'>{page.content}</p>
+                <p>{page.link}</p>
             </article>
             ))}
             </FlipPage>
