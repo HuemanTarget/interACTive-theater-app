@@ -38,6 +38,27 @@ import PlaybillFourACC from '../../pages/Finale/PlaybillFourACC'
 import ResultsACA from '../../pages/Results/ResultsACA'
 import ResultsACB from '../../pages/Results/ResultsACB'
 import ResultsACC from '../../pages/Results/ResultsACC'
+import QuestionsThreeBA from '../../pages/QuestionsThree/QuestionThreeBA'
+import QuestionsThreeBB from '../../pages/QuestionsThree/QuestionThreeBB'
+import QuestionsThreeBC from '../../pages/QuestionsThree/QuestionThreeBC'
+import PlaybillFourBAA from '../../pages/Finale/PlaybillFourBAA'
+import PlaybillFourBAB from '../../pages/Finale/PlaybillFourBAB'
+import PlaybillFourBAC from '../../pages/Finale/PlaybillFourBAC'
+import ResultsBAA from '../../pages/Results/ResultsBAA'
+import ResultsBAB from '../../pages/Results/ResultsBAB'
+import ResultsBAC from '../../pages/Results/ResultsBAC'
+import PlaybillFourBBA from '../../pages/Finale/PlaybillFourBBA'
+import PlaybillFourBBB from '../../pages/Finale/PlaybillFourBBB'
+import PlaybillFourBBC from '../../pages/Finale/PlaybillFourBBC'
+import ResultsBBA from '../../pages/Results/ResultsBBA'
+import ResultsBBB from '../../pages/Results/ResultsBBB'
+import ResultsBBC from '../../pages/Results/ResultsBBC'
+import PlaybillFourBCA from '../../pages/Finale/PlaybillFourBCA'
+import PlaybillFourBCB from '../../pages/Finale/PlaybillFourBCB'
+import PlaybillFourBCC from '../../pages/Finale/PlaybillFourBCC'
+import ResultsBCA from '../../pages/Results/ResultsBCA'
+import ResultsBCB from '../../pages/Results/ResultsBCB'
+import ResultsBCC from '../../pages/Results/ResultsBCC'
 
 
 export default ({ doSetCurrentUser }) => (
@@ -179,6 +200,75 @@ export default ({ doSetCurrentUser }) => (
     </PrivateRoute>
     <PrivateRoute exact path='/results-acc'>
       <ResultsACC doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <Route
+      exact
+      path='/questions-three-ba'
+      render={() => <QuestionsThreeBA doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/questions-three-bb'
+      render={() => <QuestionsThreeBB doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <Route
+      exact
+      path='/questions-three-bc'
+      render={() => <QuestionsThreeBC doSetCurrentUser={doSetCurrentUser} />}
+    />
+    <PrivateRoute exact path='/playbill-four-baa'>
+      <PlaybillFourBAA doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/playbill-four-bab'>
+      <PlaybillFourBAB doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/playbill-four-bac'>
+      <PlaybillFourBAC doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-baa'>
+      <ResultsBAA doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-bab'>
+      <ResultsBAB doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-bac'>
+      <ResultsBAC doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/playbill-four-bba'>
+      <PlaybillFourBBA doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/playbill-four-bbb'>
+      <PlaybillFourBBB doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/playbill-four-bbc'>
+      <PlaybillFourBBC doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-bba'>
+      <ResultsBBA doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-bbb'>
+      <ResultsBBB doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-bbc'>
+      <ResultsBBC doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/playbill-four-bca'>
+      <PlaybillFourBCA doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/playbill-four-bcb'>
+      <PlaybillFourBCB doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/playbill-four-bcc'>
+      <PlaybillFourBCC doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-bca'>
+      <ResultsBCA doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-bcb'>
+      <ResultsBCB doSetCurrentUser={doSetCurrentUser} />
+    </PrivateRoute>
+    <PrivateRoute exact path='/results-bcc'>
+      <ResultsBCC doSetCurrentUser={doSetCurrentUser} />
     </PrivateRoute>
   </Switch>
 )
