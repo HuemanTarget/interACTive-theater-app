@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Redirect, useLocation, useHistory } from 'react-router-dom'
-import { PasswordForgetLink } from '../../pages/PasswordForgetForm'
+// import { PasswordForgetLink } from '../../pages/PasswordForgetForm'
 import Firebase from '../../components/Firebase/firebase'
 
 import { useSession } from '../../App'

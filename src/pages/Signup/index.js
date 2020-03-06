@@ -58,7 +58,8 @@ const Signup = () => {
   }
 
   return (
-    <div>
+    <div className="container">
+    <section id="content">
       <h1>SIGN UP</h1>
       <form onSubmit={handleFormSubmit}>
         <div
@@ -71,6 +72,7 @@ const Signup = () => {
         >
           <input
             placeholder='Username'
+            type="text"
             name='username'
             value={state.username}
             onChange={handleChange}
@@ -78,7 +80,7 @@ const Signup = () => {
           <input
             placeholder='Email'
             name='email'
-            type='email'
+            type="text"
             value={state.email}
             onChange={handleChange}
             required
@@ -99,12 +101,11 @@ const Signup = () => {
             onChange={handleChange}
             required
           />
-          <button disabled={isInvalid} type='submit'>
-            Submit
-          </button>
+          <input type="submit" value="Sign Up" />
         </div>
       </form>
       {error && <div style={{ color: 'red' }}>{error.message}</div>}
+      </section>
     </div>
   )
 }
