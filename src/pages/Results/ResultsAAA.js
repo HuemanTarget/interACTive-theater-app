@@ -16,11 +16,11 @@ const ResultsAAA = () => {
             <NavLink exact to='/playbill'>
                 Try Again
             </NavLink>
-            <h3>Share Your Results of Facebook, Reddit, and Twitter</h3>
+            <h3>Share Your Results of Facebook, Twitter, and Reddit.</h3>
         </div>
         <div className='share'>
             <FacebookShareButton
-                url="www.example.com"
+                url="https://interactive-theatrical-app.firebaseapp.com/"
                 quote="Professor Donk and Bitana The Great were just murdered by Ernie Middleware. I found 1 of 27 endings.">
                 <FacebookIcon
                 size={60}
@@ -28,7 +28,7 @@ const ResultsAAA = () => {
             />
             </FacebookShareButton>
             <TwitterShareButton
-                url="www.example.com"
+                url="https://interactive-theatrical-app.firebaseapp.com/"
                 quote="Professor Donk and Bitana The Great were just murdered by Ernie Middleware. I found 1 of 27 endings.">
                 <TwitterIcon
                 size={60}
@@ -36,7 +36,7 @@ const ResultsAAA = () => {
             />
             </TwitterShareButton>
             <RedditShareButton
-                url="www.example.com"
+                url="https://interactive-theatrical-app.firebaseapp.com/"
                 quote="Professor Donk and Bitana The Great were just murdered by Ernie Middleware. I found 1 of 27 endings.">
                 <RedditIcon
                 size={60}

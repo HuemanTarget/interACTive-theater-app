@@ -115,7 +115,7 @@ function QuestionsTwoC() {
     if (a[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/playbill-three-a'>
+          <NavLink exact to='/playbill-three-ca'>
             Continue The Story
           </NavLink>
         </div>
@@ -123,7 +123,7 @@ function QuestionsTwoC() {
     }else if(b[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/playbill-three-b'>
+          <NavLink exact to='/playbill-three-cb'>
             Continue The Story
           </NavLink>
         </div>
@@ -131,7 +131,7 @@ function QuestionsTwoC() {
     }else if(c[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/playbill-three-c'>
+          <NavLink exact to='/playbill-three-cc'>
             Continue The Story
           </NavLink>
         </div>
@@ -139,7 +139,7 @@ function QuestionsTwoC() {
     }else{
       return(
         <div>
-          <NavLink exact to='/playbill-three-c'>
+          <NavLink exact to='/playbill-three-cc'>
             Continue The Story
           </NavLink>
         </div>
@@ -150,11 +150,11 @@ function QuestionsTwoC() {
   if (showResults) {
     return(
       <div className='container results'>
-        <h2>
+        <h3>
         Thank You For Voting.<br/>
-        The Audiences Answers Will Help<br/>
-        Determine The Rest Of The Show.<br/>
-        </h2>
+        Your Answers Change How<br/>
+        The Rest Of The Story Plays Out.<br/>
+        </h3>
         <br/>
           {/* {renderResultsData()} */}
           {nextQuestion()}

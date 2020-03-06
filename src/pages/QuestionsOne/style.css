@@ -1,5 +1,5 @@
 .container {
-    background-color: white;
+    background-color: grey;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@
   }
   
   .answer {
-    border: 1px solid #fff;
+    border: 1px solid black;
     padding: 5px 10px 5px 45px;
     width: 610px;
     text-align: left;
@@ -29,12 +29,12 @@
   
   .answer.selected {
     color: #4f4c4c;
-    background-color: #c8ffbb;
+    background-color: red;
   }
   
   .answer:hover {
     color: #4f4c4c;
-    background-color: #c8ffbb;
+    background-color: red;
   }
   
   .answer:focus {

@@ -94,7 +94,7 @@ export default ({ doSetCurrentUser }) => (
     <Route
       exact
       path='/login'
-      render={() => <Login doSetCurrentUser={doSetCurrentUser} />}
+      component={Login} 
     />
     <Route 
       exact 

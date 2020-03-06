@@ -54,7 +54,7 @@ const Signup = () => {
     state.username === ''
 
   if (user) {
-    return <Redirect to='/' />
+    return <Redirect to='/playbill' />
   }
 
   return (

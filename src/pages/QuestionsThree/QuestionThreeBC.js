@@ -130,11 +130,11 @@ function QuestionsThreeBC() {
   if (showResults) {
     return(
       <div className='container results'>
-        <h2>
+        <h3>
         Thank You For Voting.<br/>
-        The Audiences Answers Will Help<br/>
-        Determine The Rest Of The Show.<br/>
-        </h2>
+        Your Answers Change How<br/>
+        The Rest Of The Story Plays Out.<br/>
+        </h3>
         <br/>
           {/* {renderResultsData()} */}
           {nextQuestion()}

@@ -1,17 +1,10 @@
 import React from 'react';
 import FlipPage from "react-flip-page";
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 
 import './style.css';
 
 const Playbill = () => {
-
-    // const currTime = () => {
-    //     var tempTime = new Date();
-    //     var time = tempTime.getHours()+':'+ tempTime.getMinutes();
-    //     const currTime = time;
-    //     return currTime
-    // }
 
     const pages = [
         { 

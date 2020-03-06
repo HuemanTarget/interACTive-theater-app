@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom'
 import { useSession } from '../../App'
-// import Firebase from '../../components/Firebase/firebase'
-// import firebase from 'firebase'
+import Firebase from '../../components/Firebase/firebase'
+import firebase from 'firebase'
 import Progress from '../QuestionsOne/Progress'
 import Question from '../QuestionsOne/Question'
 import Answers from '../QuestionsOne/Answers'
@@ -67,56 +67,37 @@ function QuestionOne(props) {
 
   }
 
-  // const handleSubmit = async event => {
-  //   // event.preventDefault()
-  //   const batch = Firebase.db.batch()
-  //   const userRef = Firebase.db.collection('users').doc(user.uid)
-  //   try {
-  //     // Create a new post doc with auto ID locally
-  //     const newAnswerRef = Firebase.db.collection('answersOne').doc()
-  //     // add batch op to set post data including logged in uid
-  //     const answer = {
-  //       questionOne: questions[0].question,
-  //       answerOne: answers[0].answer,
-  //       questionTwo: questions[1].question,
-  //       answerTwo: answers[1].answer,
-  //       questionsThree: questions[2].question,
-  //       answerThree: answers[2].answer,
-  //       lastModified: firebase.firestore.FieldValue.serverTimestamp(),
-  //       uid: user.uid,
-  //     }
-  //     batch.set(newAnswerRef, answer)
+  const handleSubmit = async event => {
+    // event.preventDefault()
+    const batch = Firebase.db.batch()
+    const userRef = Firebase.db.collection('users').doc(user.uid)
+    try {
+      // Create a new post doc with auto ID locally
+      const newAnswerRef = Firebase.db.collection('answersOne').doc()
+      // add batch op to set post data including logged in uid
+      const answer = {
+        questionOne: questions[0].question,
+        answerOne: answers[0].answer,
+        questionTwo: questions[1].question,
+        answerTwo: answers[1].answer,
+        questionsThree: questions[2].question,
+        answerThree: answers[2].answer,
+        lastModified: firebase.firestore.FieldValue.serverTimestamp(),
+        uid: user.uid,
+      }
+      batch.set(newAnswerRef, answer)
   
-  //     batch.commit().then(() => {
-  //       console.log('Added new post', newAnswerRef.id)
-  //     })
-  //   } catch (error) {
-  //     console.error('Error adding document: ', error)
-  //   }
-  // }
+      batch.commit().then(() => {
+        console.log('Added new post', newAnswerRef.id)
+      })
+    } catch (error) {
+      console.error('Error adding document: ', error)
+    }
+  }
   
 
 
-  // const renderResultsData = () => {
-  //   return (
-  //       <h2>
-  //           {questions[0].question} - {answers[0].answer} <br/>
-  //           {questions[1].question} - {answers[1].answer} <br/>
-  //           {questions[2].question} - {answers[2].answer} <br/>
-  //       </h2>
-  //   )
-  // }
-
-    // const renderResultsData = () => {
-    //     return answers.map(answer => {
-    //     const question = questions.find( question => question.id === answer.questionId);
-    //     return (
-    //         <div key={question.id}>
-    //         {question.question} - {answers.answer}
-    //         </div>
-    //     )
-    //     })
-    // }
+  
 
   const next = () => {
     const answer = {questionId: question.id, answer: currentAnswer};
@@ -183,25 +164,20 @@ function QuestionOne(props) {
   if (showResults) {
     return(
       <div className='container results'>
-        <h2>
+        <h3>
         Thank You For Voting.<br/>
-        The Audiences Answers Will Help<br/>
-        Determine The Rest Of The Show.<br/>
-        </h2>
+        Your Answers Change How<br/>
+        The Rest Of The Story Plays Out.<br/>
+        </h3>
         <br/>
-          {/* {renderResultsData()} */}
           
           {nextQuestion()}
-          {/* {handleSubmit()} */}
+          {handleSubmit()}
       </div>
     )
   }else{
   return (
     <div className='container'>
-    {/* <form
-        onSubmit={handleSubmit}
-        style={{ marginTop: '.5em', marginBottom: '.5em' }}
-    > */}
       <Progress total={questions.length} current={currentQuestion + 1} />
       <Question question={question.question} />
       {renderError()}
@@ -209,7 +185,6 @@ function QuestionOne(props) {
       <button className='btn btn-primary' onClick={next}>
         Confirm And Continue
       </button>
-    {/* </form> */}
     </div>
   );
   }

@@ -115,7 +115,7 @@ function QuestionsTwoB() {
     if (a[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/playbill-three-a'>
+          <NavLink exact to='/playbill-three-ba'>
             Continue The Story
           </NavLink>
         </div>
@@ -123,7 +123,7 @@ function QuestionsTwoB() {
     }else if(b[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/playbill-three-b'>
+          <NavLink exact to='/playbill-three-bb'>
             Continue The Story
           </NavLink>
         </div>
@@ -131,7 +131,7 @@ function QuestionsTwoB() {
     }else if(c[0] === answers[0].answer) {
       return(
         <div>
-          <NavLink exact to='/playbill-three-c'>
+          <NavLink exact to='/playbill-three-bc'>
             Continue The Story
           </NavLink>
         </div>
@@ -150,11 +150,11 @@ function QuestionsTwoB() {
   if (showResults) {
     return(
       <div className='container results'>
-        <h2>
+        <h3>
         Thank You For Voting.<br/>
-        The Audiences Answers Will Help<br/>
-        Determine The Rest Of The Show.<br/>
-        </h2>
+        Your Answers Change How<br/>
+        The Rest Of The Story Plays Out.<br/>
+        </h3>
         <br/>
           {/* {renderResultsData()} */}
           {nextQuestion()}

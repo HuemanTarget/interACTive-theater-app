@@ -29,7 +29,7 @@ const Login = () => {
     e.preventDefault()
     try {
       await Firebase.doSignInWithEmailAndPassword(email, password)
-      history.replace(from)
+      history.push('/playbill')
     } catch (error) {
       setError(error)
       setTimeout(() => {
