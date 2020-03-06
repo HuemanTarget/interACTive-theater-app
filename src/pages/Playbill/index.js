@@ -32,7 +32,7 @@ const Playbill = () => {
         },
         { 
             page: 4,
-            title: "Cast Contd",
+            title: "Cast Cont'd",
             titletwo: "5). DJ Galindo", 
             contenttwo: "Mixes Massive Beats and Jams",
             titlethree: "6). Mustang Zane",
@@ -43,7 +43,7 @@ const Playbill = () => {
         { 
             page: 5,
             title: "Story",
-            content: "It was a night much like every other night when seven members of the SEI-69 Cohort were invited on the exclusive Cohort Express for a trip from DTLA to Universal Studios Hollywood. Not knowing who invited them there, the group assembled in the dinning car for a meal fit for royalty, Papa Johns. As the scrumptious meal of cold bread sticks, dried chicken balls, and shriveled pizza were served to the guests. The lights went out and a scream was heard.",
+            content: "It was a night much like every other night when seven members of the SEI-69 Cohort were invited to take a trip on the exclusive Cohort Express from DTLA to Universal Studios Hollywood. Not knowing who invited them there, the group assembled in the dinning car for a meal fit for royalty, Papa Johns. As the scrumptious meal of cold bread sticks, dried chicken balls, and shriveled pizza were served to the guests the lights went out and a scream was heard!",
             link: <NavLink exact to='/questions-one'>Questions One</NavLink>
         }
     ];
