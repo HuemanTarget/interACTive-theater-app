@@ -19,7 +19,7 @@ const ResultsCAA = () => {
         <div className='share'>
             <FacebookShareButton
                 url="https://interactive-theatrical-app.firebaseapp.com/"
-                quote="Professor Donk and Bitana The Great were just murdered by Blake Johnson. I found 1 of 27 endings.">
+                quote="The Sofias and DJ Galindo were just murdered by Mustang Zane. I found 1 of 27 endings.">
                 <FacebookIcon
                 size={60}
                 round
@@ -27,7 +27,7 @@ const ResultsCAA = () => {
             </FacebookShareButton>
             <TwitterShareButton
                 url="https://interactive-theatrical-app.firebaseapp.com/"
-                quote="Professor Donk and Bitana The Great were just murdered by Blake Johnson. I found 1 of 27 endings.">
+                quote="The Sofias and DJ Galindo were just murdered by Mustang Zane. I found 1 of 27 endings.">
                 <TwitterIcon
                 size={60}
                 round
@@ -35,7 +35,7 @@ const ResultsCAA = () => {
             </TwitterShareButton>
             <RedditShareButton
                 url="https://interactive-theatrical-app.firebaseapp.com/"
-                quote="Professor Donk and Bitana The Great were just murdered by Ernie Middleware. I found 1 of 27 endings.">
+                quote="The Sofias and DJ Galindo were just murdered by Mustang Zane. I found 1 of 27 endings.">
                 <RedditIcon
                 size={60}
                 round
