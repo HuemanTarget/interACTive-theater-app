@@ -1,17 +1,11 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom'
 import { useSession } from '../../App'
-import Firebase from '../../components/Firebase/firebase'
-import firebase from 'firebase'
+// import Firebase from '../../components/Firebase/firebase'
+// import firebase from 'firebase'
 import Progress from '../QuestionsOne/Progress'
 import Question from '../QuestionsOne/Question'
 import Answers from '../QuestionsOne/Answers'
-
-// import QuestionsTwoA from '../QuestionsTwo/QuestionTwoA'
-// import QuestionsTwoB from '../QuestionsTwo/QuestionTwoB'
-// import QuestionsTwoC from '../QuestionsTwo/QuestionTwoC'
-// import QuestionsTwoD from '../QuestionsTwo/QuestionTwoD'
-// import QuestionsTwoE from '../QuestionsTwo/QuestionTwoE'
 
 
 import './style.css';
@@ -24,7 +18,7 @@ function QuestionOne(props) {
   const [answers, setAnswers] = useState([]);
   const [showResults, setShowResults] = useState(false);
   const [error, setError] = useState('');
-  // const [answersA, setAnswersA] = useState([1,2,3]);
+
 
   const questions = [
     {
@@ -67,33 +61,33 @@ function QuestionOne(props) {
 
   }
 
-  const handleSubmit = async event => {
-    // event.preventDefault()
-    const batch = Firebase.db.batch()
-    const userRef = Firebase.db.collection('users').doc(user.uid)
-    try {
-      // Create a new post doc with auto ID locally
-      const newAnswerRef = Firebase.db.collection('answersOne').doc()
-      // add batch op to set post data including logged in uid
-      const answer = {
-        questionOne: questions[0].question,
-        answerOne: answers[0].answer,
-        questionTwo: questions[1].question,
-        answerTwo: answers[1].answer,
-        questionsThree: questions[2].question,
-        answerThree: answers[2].answer,
-        lastModified: firebase.firestore.FieldValue.serverTimestamp(),
-        uid: user.uid,
-      }
-      batch.set(newAnswerRef, answer)
+  // const handleSubmit = async event => {
+  //   // event.preventDefault()
+  //   const batch = Firebase.db.batch()
+  //   const userRef = Firebase.db.collection('users').doc(user.uid)
+  //   try {
+  //     // Create a new post doc with auto ID locally
+  //     const newAnswerRef = Firebase.db.collection('answersOne').doc()
+  //     // add batch op to set post data including logged in uid
+  //     const answer = {
+  //       questionOne: questions[0].question,
+  //       answerOne: answers[0].answer,
+  //       questionTwo: questions[1].question,
+  //       answerTwo: answers[1].answer,
+  //       questionsThree: questions[2].question,
+  //       answerThree: answers[2].answer,
+  //       lastModified: firebase.firestore.FieldValue.serverTimestamp(),
+  //       uid: user.uid,
+  //     }
+  //     batch.set(newAnswerRef, answer)
   
-      batch.commit().then(() => {
-        console.log('Added new post', newAnswerRef.id)
-      })
-    } catch (error) {
-      console.error('Error adding document: ', error)
-    }
-  }
+  //     batch.commit().then(() => {
+  //       console.log('Added new post', newAnswerRef.id)
+  //     })
+  //   } catch (error) {
+  //     console.error('Error adding document: ', error)
+  //   }
+  // }
   
 
 
@@ -172,7 +166,6 @@ function QuestionOne(props) {
         <br/>
           
           {nextQuestion()}
-          {handleSubmit()}
       </div>
     )
   }else{

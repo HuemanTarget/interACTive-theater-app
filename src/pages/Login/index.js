@@ -5,6 +5,8 @@ import Firebase from '../../components/Firebase/firebase'
 
 import { useSession } from '../../App'
 
+import './style.css'
+
 const Login = () => {
   const user = useSession()
   const location = useLocation()
@@ -41,37 +43,35 @@ const Login = () => {
     return <Redirect exact to='/playbill' />;
   }
   return (
-    <div>
+    <div className="container">
+    <section id="content">
       <h1>Login</h1>
       <form onSubmit={handleFormSubmit}>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <input
-            name='email'
-            onChange={handleChange}
-            value={state.email}
-            placeholder='email'
-          />
-          <input
-            name='password'
-            onChange={handleChange}
-            value={state.password}
-            placeholder='password'
-            type='password'
-          />
-          <button type='submit'>Login</button>
+        <div>
+          <input type="text" name="email" placeholder="Email" onChange={handleChange} value={state.email} required="" id="username" />
         </div>
+        <div>
+          <input type="password" placeholder="Password" name='password' onChange={handleChange} value={state.password} required="" id="password" />
+        </div>
+        <div>
+          <input type="submit" value="Log in" />
+          <a href="/password-forget">Lost your password?</a>
+          <a href="/signup">Sign Up</a>
+        </div>
+        
       </form>
       {error && <div style={{ color: 'red' }}>{error.message}</div>}
-      <PasswordForgetLink />
+      </section>
     </div>
   )
 }
 
 export default Login
+
+
+
+
+            
+
+
+            

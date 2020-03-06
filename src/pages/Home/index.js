@@ -1,3 +1,3 @@
-const Home = () => 'Please Login to Tonights Show'
+const Home = () => 'Please Login To Play'
 
 export default Home

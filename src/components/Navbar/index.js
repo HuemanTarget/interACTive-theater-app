@@ -52,7 +52,7 @@ const Navbar = () => {
         {user ? (
           <>
             <NavLink exact to='/playbill' style={{ margin: '0px 10px 0px 10px' }}>
-              Playbill
+              Start The Story
             </NavLink>
             {/* <NavLink exact to='/questions-one' style={{ margin: '0px 10px 0px 10px' }}>
               Questions
