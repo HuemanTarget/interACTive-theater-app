@@ -4,11 +4,6 @@ import Progress from '../QuestionsTwo/Progress'
 import Question from '../QuestionsTwo/Question'
 import Answers from '../QuestionsTwo/Answers'
 
-// import QuestionsTwoA from '../QuestionsTwo/QuestionTwoA'
-// import QuestionsTwoB from '../QuestionsTwo/QuestionTwoB'
-// import QuestionsTwoC from '../QuestionsTwo/QuestionTwoC'
-// import QuestionsTwoD from '../QuestionsTwo/QuestionTwoD'
-// import QuestionsTwoE from '../QuestionsTwo/QuestionTwoE'
 
 
 import './style.css';
@@ -20,7 +15,7 @@ function QuestionsTwoB() {
   const [answers, setAnswers] = useState([]);
   const [showResults, setShowResults] = useState(false);
   const [error, setError] = useState('');
-  // const [answersA, setAnswersA] = useState([1,2,3]);
+  
 
   const questions = [
     {
@@ -64,26 +59,7 @@ function QuestionsTwoB() {
   }
 
 
-//   const renderResultsData = () => {
-//     return (
-//         <h2>
-//             {questions[0].question} - {answers[0].answer} <br/>
-//             {questions[1].question} - {answers[1].answer} <br/>
-//             {questions[2].question} - {answers[2].answer} <br/>
-//         </h2>
-//     )
-//   }
 
-    // const renderResultsData = () => {
-    //     return answers.map(answer => {
-    //     const question = questions.find( question => question.id === answer.questionId);
-    //     return (
-    //         <div key={question.id}>
-    //         {question.question} - {answers.answer}
-    //         </div>
-    //     )
-    //     })
-    // }
 
   const next = () => {
     const answer = {questionId: question.id, answer: currentAnswer};
@@ -156,7 +132,6 @@ function QuestionsTwoB() {
         The Rest Of The Story Plays Out.<br/>
         </h3>
         <br/>
-          {/* {renderResultsData()} */}
           {nextQuestion()}
       </div>
     )
