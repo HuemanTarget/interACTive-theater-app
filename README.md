@@ -6,6 +6,14 @@
 
 Joshua Basche & Pompous Cat Games
 
+## To Play
+
+- Please sign up or sign in using the provided links in the nav-bar.
+- Once logged in, use your mouse or trackpad to scroll from right to left to flip pages.
+- Continue through to the end of all the questions to see the major decisions you made along the way.
+- If trying to download or use the code, please run NPM INSTALL to make sure all modules are installed correctly.
+- Have fun.
+
 ### Play through your own murder mystery and decide how the story unfolds by answering questions that changes at certain junctions that change how the story ends. There are 27 different paths, can you find them all?
 
 ![](https://i.imgur.com/XWiw0AX.png)
